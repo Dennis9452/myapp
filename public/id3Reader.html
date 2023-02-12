@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<!-- <script src="https://cdn.radiantmediatechs.com/rmp/7.1.0/js/rmp-hlsjs.min.js"></script> -->
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script><!-- Samsung Tizen -->
+</head>
+<!-- Player container element -->
+<body>
+<video id="video" controls autoplay muted></video>
+<button id="switch">switch Source</button>
+<div>now Source:
+    <a id="srcUrl"></a>
+</div>
+<script>
+  // Here we set our HLS streaming source
+  var src = 
+  "http://172.21.103.141:8800/bunnyM3u8/testing/test.m3u8";
+  // "http://devimages.apple.com/samplecode/adDemo/ad.m3u8";
+  var src2 = "http://172.21.103.141:8800/bunnyM3u8/bunny.m3u8";
+  var nowSrc = src;
+  var video = document.getElementById('video');
+  var hls = new Hls();
+  var rate = 1;
+  var webapis;
+
+//   document.getElementById("switch").addEventListener("keydown",function(event){
+//     switch(event.keyName){
+//       case Keyboard.NUMBER_3:
+//         rate += 0.25;
+//         setPlaybackRate(rate);
+//         break;
+//       case Keyboard.NUMBER_1:
+//         rate -= 0.25;
+//         setPlaybackRate(rate);
+//         break;
+//     }
+
+//   });
+
+//   (function(){
+//     if(webapis){
+//       avPlayerObj = webapis.avplay;
+//       playerEl = document.getElementById("video");
+//       if(playerEl === null){
+//           playerEl = document.createElement("OBJECT");
+//           playerEl.setAttribute("id", "video");
+//           playerEl.setAttribute("type", "application/avplayer");
+//           playerEl.style.backgroundColor = "#000";
+//           playerEl.style.width = "100%";
+//           playerEl.style.height = "100%";
+//           playerEl.style.position = "absolute";
+//           playerEl.style.top = "0px";
+//           playerEl.style.left = "0px";
+//           document.body.insertBefore(playerEl, document.body.firstChild);
+//       }
+//       if(avPlayerObj.getState() == "IDLE"){
+//           avPlayerObj.prepare();
+//       } else if (avPlayerObj.getState() == "PLAYING" || avPlayerObj.getState() == "NONE") {
+//         return;
+//       }
+    
+//       avPlayerObj.play();
+//     }
+// }());
+//   function seek(millisecond){
+//       if(avPlayerObj.getState() === "NONE") return;
+//       isSeeking = true;
+//       try {
+//           avPlayerObj.seekTo(millisecond, onSeekSuccess, onSeekError);
+//       } catch (e) {
+//           isSeeking = false;
+//           console.log(e);
+//       }
+//       if(isSeeking == true){
+//           tempSeekValue = millisecond;
+//           eventCenter.publish("seeking", []);
+//       }
+//   }
+
+//   function setPlaybackRate(rate){
+//       avPlayerObj.setPlaybackRate(rate > 0? 2 : -2);
+//   }
+
+  document.getElementById("switch").addEventListener("click",function(){
+    
+      if(nowSrc != src){
+        // console.log(src)
+        nowSrc = src;
+        hlsRun();
+        document.getElementById("srcUrl").innerText = src;
+      }else{
+        // console.log(src2)
+        nowSrc = src2;
+        hlsRun();
+        document.getElementById("srcUrl").innerText = src2;
+      }
+  });
+
+  hlsRun();
+
+  function hlsRun(){
+    if (Hls.isSupported()) {
+      hls.attachMedia(video);
+    
+      hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+        console.log("video and hls.js are now bound together !");
+        // console.log("nowSrc: ",nowSrc);
+        hls.loadSource(nowSrc);
+        document.getElementById("srcUrl").innerText = nowSrc;
+        // hls.loadSource("http://172.21.101.144:8800/bunnyM3u8/bunny.m3u8");
+        
+      });
+      hls.on(Hls.Events.FRAG_PARSING_METADATA, function(event, data) {
+        console.log("FRAG_PARSING_METADATA");
+        if (data) {
+          // For each ID3 tag in the metadata, pass in the type - ID3, the
+          // tag data (a byte array), and the presentation timestamp (PTS).
+          data.samples.forEach(function(sample) {
+            // console.log('ID3', sample.data, sample.pts);
+            var uint8array = new TextEncoder().encode("¢");
+            var string = new TextDecoder().decode(sample.data);
+            console.log(string);
+          });
+        }
+      });
+    }
+  }
+</script>
+</body>
+<!-- Set up player configuration options -->
+
+</html>

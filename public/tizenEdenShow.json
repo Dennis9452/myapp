@@ -1,0 +1,357 @@
+{
+    "expires": 1626420403,
+    "sections": [
+        {
+            "title": "免費戲劇",
+            "tiles": [
+                {
+                    "title": "一不小心撿到愛",
+                    "subtitle": "新一代甜寵劇女王趙露思，最新的高甜劇！小白兔與大灰狼總裁的同居戀愛....",
+                    "position": 0,
+                    "image_url": "http://172.21.103.141:8800/file/cubs.png",
+                    "action_data": "{\"uri\":\"/vod/player?&category_id=720&id=VOD00118138&utm_source=ATVhome&utm_medium=recommend&utm_campaign=免費戲劇館\",\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00219258\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "以家人之名",
+                    "subtitle": "三個沒有血緣關係、在原生家庭遭遇過不同傷痛的孩子，機緣巧合下成為了兄妹",
+                    "position": 0,
+                    "image_url": "http://172.21.103.141:8800/file/mets.png",
+                    "action_data": "{\"uri\":\"/purchase?page=PURCHASE_HISTORY\",\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00187861\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "山河令",
+                    "subtitle": "一場陰謀，兩個知己，五塊寶藏拼圖，廿載恩怨，千百年江湖夢！張哲瀚、龔俊主演。",
+                    "position": 0,
+                    "image_url": "http://172.21.103.141:8800/file/nationals.png",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00209065\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "老酒館",
+                    "subtitle": "在日本殖民統治下的大連開起酒館謀生計。老酒館由此成了八方信息、各色人等匯聚的舞臺",
+                    "position": 0,
+                    "image_url": "http://172.21.103.141:8800/file/brewers.png",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00208149\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "宮鎖心玉",
+                    "subtitle": "古董店繼承人穿越至清朝康熙年間，入宮陷入了康熙朝「九子奪嫡」的明爭暗鬥和諸阿哥們的情感糾葛之中",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/94af28a299c479022ce070f13727ce7b.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00212977\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "長歌行",
+                    "subtitle": "破10億播放量年度陸劇之冠！超高顏值主演群，迪麗熱巴、吳磊、趙露思演技齊放",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/48983d1ae67e66a7bc630a72eb315225.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00212022\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "大發不動產",
+                    "subtitle": "年度紓壓驅魔韓劇，驅魔師張娜拉專業買賣鬧鬼房",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/18f782b2ce2dd7a2640c99f2b3e91ed4.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00211987\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "謝謝讓我遇見你",
+                    "subtitle": "社交恐懼症男孩南晰與他的唯一解藥夏芮，專屬於他們的療愈系清新校園戀曲",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/b9359efb2cf585f46b699d32ffbed6bf.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00211387\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                }
+            ],
+            "position": 0
+        },
+        {
+            "title": "強檔推薦",
+            "tiles": [
+                {
+                    "title": "一不小心撿到愛",
+                    "subtitle": "新一代甜寵劇女王趙露思，最新的高甜劇！小白兔與大灰狼總裁的同居戀愛....",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/f8bfdfb3453bad7d77c5c26ff1aa49f6.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00219258\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "2021 英國公開賽",
+                    "subtitle": "第149屆英國公開賽，7/15起連續四天，精彩賽事獨家live直播！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/d8b961705884f705fc84f93f3341af2d.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"77\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "長歌行",
+                    "subtitle": "破10億播放量年度陸劇之冠！超高顏值主演群，迪麗熱巴、吳磊、趙露思演技齊放",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/7b9524598caa27a33325d18388571e2f.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00212022\",\"categoryId\":\"78\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "大發不動產",
+                    "subtitle": "年度紓壓驅魔韓劇，驅魔師張娜拉專業買賣鬧鬼房",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/366a8d1500ce67dd53b23bfb0e042f5e.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00211987\",\"categoryId\":\"30\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "失控快遞",
+                    "subtitle": "《即刻殺機》歐嘉柯瑞蘭蔻、《黑暗騎士》奧斯卡影帝 ​蓋瑞歐德曼最新力作！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/98e84894cdbaafb9be29adedf605f161.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00183261\",\"categoryId\":\"1\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "馬德里金庫盜數90分鐘",
+                    "subtitle": "《X戰警》「黑鳳凰」芬姬詹森回歸好萊塢大銀幕，演出亦正亦邪美豔特務！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/9924766ff1828f27df3ebdd58c4c7114.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00207965\",\"categoryId\":\"1\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "以家人之名",
+                    "subtitle": "三個沒有血緣關係、在原生家庭遭遇過不同傷痛的孩子，機緣巧合下成為了兄妹",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/3f77c1a0ad5264bdb1a0cb367e103baa.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00187861\",\"categoryId\":\"30\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "宮鎖心玉",
+                    "subtitle": "古董店繼承人穿越至清朝康熙年間，入宮陷入了康熙朝「九子奪嫡」的明爭暗鬥和諸阿哥們的情感糾葛之中",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/600cd9900f13f96018d2ff8f8a841223.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00212977\",\"categoryId\":\"30\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "疫情最新消息一次掌握",
+                    "subtitle": "疫情期間非必要不外出",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/5e1d07111e3a7ec362d9984916358779.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"51\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "當愛未成往事",
+                    "subtitle": "最揪心的遠距離愛戀！《丹麥女孩》金獎女主角艾莉西亞薇坎德與「X教授」詹姆斯麥艾維首次攜手合作！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/750816ce9629950452df7eee4665af37.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00216208\",\"categoryId\":\"1\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "我的愛情治癒記",
+                    "subtitle": "蘇有珍，延政勳主演。家人對他們的來說究竟是什麼??",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/227737d99baddac0c5616ac0c7e17c98.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00213094\",\"categoryId\":\"78\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "小荳子 第二季",
+                    "subtitle": "全新小荳子！一同出發去探險",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/723912fd3b8f622ea4dfe1632dcccbca.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"kids\",\"contentId\":\"VOD00205036\",\"categoryId\":\"513\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "迷你卡車樂園",
+                    "subtitle": "歡迎來到迷你小鎮！ 這裡有各式各樣的街道汽車和建築汽車。",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/88d7d50a6f944c16d95428aff9bb2fbb.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"kids\",\"contentId\":\"VOD00199738\",\"categoryId\":\"513\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "謝謝讓我遇見你",
+                    "subtitle": "社交恐懼症男孩南晰與他的唯一解藥夏芮，專屬於他們的療愈系清新校園戀曲",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/8ddf88d461dde0f15de6a84669deb0ef.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00210683\",\"categoryId\":\"78\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "贅婿",
+                    "subtitle": "((爆笑爽劇))霸道總裁穿越武朝成贅婿！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/3f9e18aa735012c4b9f4e4b32b5fb21d.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00207159\",\"categoryId\":\"30\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "山河令",
+                    "subtitle": "一場陰謀，兩個知己，五塊寶藏拼圖，廿載恩怨，千百年江湖夢！張哲瀚、龔俊主演。",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/da094f46c7af068dc174fe20f90b0df5.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00209065\",\"categoryId\":\"30\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "關於我轉生變成史萊姆那檔事第2季",
+                    "subtitle": "統領大草原的魔物之王竟是史萊姆？！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/556b6db13f13a3c704d2ad5e515d4563.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"comic\",\"contentId\":\"VOD00199996\",\"categoryId\":\"40\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "鬼滅之刃",
+                    "subtitle": "話題大作，拯救妹妹的殺鬼獵人！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/b6b1c4b7853a13a85c37c89919864d8a.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"comic\",\"contentId\":\"VOD00145804\",\"categoryId\":\"40\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "天才衝衝衝",
+                    "subtitle": "天才衝衝衝15歲啦！一起跟著主持人和來賓腦力激盪吧！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/58a561718c8c70f488cd19db8c8e3fa6.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"show\",\"contentId\":\"VOD00184897\",\"categoryId\":\"209\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "兩天一夜第四季",
+                    "subtitle": "療癒系韓綜來啦！一起走遍韓國美麗的地方！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/15791157d8e40d301a3f725f3e84f5c4.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"show\",\"contentId\":\"VOD00199282\",\"categoryId\":\"209\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "家庭8點檔轉轉發現愛",
+                    "subtitle": "從真理出發的家庭談話性節目，針對現代婚姻家庭議題讓您輕鬆掌握關注方向。",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/3867aec4c10c3fe63fd844ce0246b2a0.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"blessedlife\",\"contentId\":\"VOD00216925\",\"categoryId\":\"235\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                }
+            ],
+            "position": 0
+        },
+        {
+            "title": "電視頻道",
+            "tiles": [
+                {
+                    "title": "2021 英國公開賽",
+                    "subtitle": "第149屆英國公開賽",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/eff23d2b0c763cc0d86df4c61baf8491.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"77\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "TVBS新聞台",
+                    "subtitle": "",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/499bce9ec16e91f585ada93434176a50.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"55\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "東森新聞台",
+                    "subtitle": "",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/7f54cbb1087413283d098e6750692f3d.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"\",\"contentId\":\"51\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "CATCHPLAY電影台",
+                    "subtitle": "",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/2e6a5396431c8f2b7daf7938ea760ab7.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"69\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "華視新聞台",
+                    "subtitle": "",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/a83846d591d34f12162214df5f16df05.jpg",
+                    "action_data": "{\"type\":\"VOD\",\"contentType\":\"\",\"contentId\":\"52\",\"categoryId\":\"\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "民視新聞台",
+                    "subtitle": "",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/709481d08aaa2ed7965702ff0e9e352d.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"53\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "博斯網球台",
+                    "subtitle": "",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/7ad3ca3ae19c1f64fecfa0c6068c5cf8.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"81\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                },
+                {
+                    "title": "哆啦A夢電影版",
+                    "subtitle": "一輩子的好夥伴，陪你防疫宅在家！",
+                    "position": 0,
+                    "image_url": "http://statictv.svc.litv.tv/launcher/recommend/38309eff36c28bd16b842300adca61c4.jpg",
+                    "action_data": "{\"type\":\"CHANNEL\",\"catalogId\":\"\",\"channelNo\":\"22\"}",
+                    "is_playable": false,
+                    "image_ratio": "4by3"
+                }
+            ],
+            "position": 0
+        }
+    ],
+    "expires_only": false
+}

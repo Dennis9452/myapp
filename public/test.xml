@@ -1,0 +1,28 @@
+<VAST version="4.0">
+    <Ad id="BRANDLIFT_ADID">
+        <InLine>
+            <AdSystem>LiTV_interactive</AdSystem>
+            <AdTitle>BRAND LIFT AdTitle</AdTitle>
+            <Advertiser>BRAND LIFT Advertiser</Advertiser>
+            <Description>Hello there, this is Brand Lift.</Description>
+            <Creatives>
+                <Creative id="BRANDLIFT_CREATIVE_ID" adId="BRANDLIFT_CREATIVE_ADID">
+                    <UniversalAdId>BRANDLIFT_UniversalAdId</UniversalAdId>
+                    <Linear>
+                        <!-- <Duration>00:05:02</Duration> -->
+                        <Duration>00:01:36</Duration>
+                        <MediaFiles>
+                            <MediaFile delivery="progressive" type="video/mp4" width="960" height="540">
+                                <![CDATA[https://redirectingapp.herokuapp.com/route/foodpanda.mp4]]>
+                                <!-- <![CDATA[https://fino.svc.litv.tv/ads/media/survey96.mp4]]> -->
+                            </MediaFile>
+                            <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
+                                <![CDATA[https://redirectingapp.herokuapp.com/route/qrcode_foodpanda]]>
+                            </InteractiveCreativeFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

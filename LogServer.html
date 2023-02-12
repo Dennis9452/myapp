@@ -1,0 +1,64 @@
+<html>
+<body>
+
+<p>Click the button to create a SCRIPT element that alerts "Hello World!".</p>
+
+<button id="s">1</button>
+<button id="p">3</button>
+<button id="q">4</button>
+<button id="r">5</button>
+
+<video autobuffer autoloop loop controls poster="/angels.png" width="400">
+	<source src="https://edgecast-vod.yimg.com/brdsp/8118d176-011d-52d2-a859-24edde1a2485/00e927ba-3b57-484f-a473-c4daf9b8d1ad.mp4" type="video/mp4" media="">
+</video>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+var logServer = "http://ad3f07198a0e.ngrok.io/"
+var times = 0;
+
+function toLogServer(size) {
+	var fileName = "testLocal"+size+"MB.txt"
+	
+	var url = logServer + fileName;
+
+	console.log(url);
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', url, true);
+	console.log("out") 
+    
+    xhr.send();
+    xhr.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+		    console.log("s") 
+		    try{
+		    	localStorage.setItem(times,this.responseText);
+		    	times++;
+		    }catch(e){
+		    	console.log(e)
+		    }
+		    console.log("x")  
+	    }
+	};
+}
+document.getElementById("s").addEventListener("click",function(){
+	console.log(this.innerHTML)
+	toLogServer(this.innerHTML);
+})
+document.getElementById("p").addEventListener("click",function(){
+	console.log(this.innerHTML)
+	toLogServer(this.innerHTML);
+})
+document.getElementById("q").addEventListener("click",function(){
+	console.log(this.innerHTML)
+	toLogServer(this.innerHTML);
+})
+document.getElementById("r").addEventListener("click",function(){
+	console.log(this.innerHTML)
+	toLogServer(this.innerHTML);
+
+})
+</script>

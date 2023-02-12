@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h2>HTML Iframes</h2>
+	<p>You can also use the CSS height and width properties to specify the size of the iframe:</p>
+	<div id="error"></div>
+	<!-- <iframe src="https://staging-web.svc.litv.tv" style="height:200px;width:300px" title="Iframe Example"></iframe> -->
+</body>
+<script type="text/javascript">
+	var context_1st = "1", context_2nd = "2", context_3rd = "3";
+	var url = {
+		1 : "http://p-webtv01.svc.litv.tv:8080/webappapi/LTSMS04/tizenEdenShow.json",
+		2 : "http://p-webtv02.svc.litv.tv:8080/webappapi/LTSMS04/tizenEdenShow.json",
+		3 : "http://p-webtv03.svc.litv.tv:8080/webappapi/LTSMS04/tizenEdenShow.json"
+	} ;
+	var result = {
+		1 :"",
+		2 :"",
+		3 :""
+	};
+	var loop = 1;
+
+
+	var timer_1st = setInterval( function(){
+		loop = 1;
+		var urlNum = Math.floor(Math.random() * 3 + 1);
+		sendAjax(context_1st, url[urlNum]);
+		
+		urlNum = Math.floor(Math.random() * 3 + 1);
+		sendAjax(context_2nd, url[urlNum]);
+		urlNum = Math.floor(Math.random() * 3 + 1);
+		sendAjax(context_3rd, url[urlNum]);
+
+		responseHandle();
+	}, 2 * 60 * 1E3);
+
+
+	function responseHandle (response, success){
+		console.log(result);
+		context_1st = result[1];
+		context_2nd = result[2];
+		context_3rd = result[3];
+
+		if( JSON.stringify(context_1st) === JSON.stringify(context_2nd) && JSON.stringify(context_1st) === JSON.stringify(context_3rd) && JSON.stringify(context_2nd) === JSON.stringify(context_3rd)){
+			console.log("SAME");
+		}else{
+			document.getElementById("error").innerText += "different : " + new Date(Date.now()).toLocaleString() + "\n"
+			console.error("different",new Date(Date.now()).toLocaleString());
+		}
+	}
+
+	function sendAjax(para, url){
+		
+		// var xhr = new XMLHttpRequest();
+		// var response;
+		
+
+		// xhr.onreadystatechange = function() {
+		//     if (xhr.readyState === 4) {
+		//     	context_1st = xhr.response;
+		//     	result(context_1st);
+		//     }
+		// }
+		// xhr.open('GET', url, true);
+		// xhr.send();
+		
+		console.log(url);
+		$.get(url, function(res){
+				
+			})
+			.done(function(response){
+				result[loop] = response.sections[0];
+				// console.log("from");
+				loop++;
+			})
+			.fail(function(xhr, textStatus, error){
+			      console.log(xhr.statusText);
+			      console.log(textStatus);
+			      console.log(error);
+		});
+	}
+</script>
+</html>

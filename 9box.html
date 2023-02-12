@@ -1,0 +1,304 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>九宫格布局</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+</head>  
+<body>  
+<html>  
+<head>  
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">  
+/** 重置浏览器默认标签样式 */ 
+
+
+html, body { width:100%;height: 100%; max-width:100%;display: flex;justify-content: center;} 
+.outer{
+  width:100%;height: 100%;
+  display: inline;
+  position: relative;
+} 
+ul,li{margin:0;padding:0;}   
+/* .xttblog { 
+ float: left;   
+ width: 50%; 
+ height: 75%;
+ margin-top:50px;   
+ margin-left: auto;   
+ margin-right: auto; 
+ overflow:hidden;  
+}  */  
+.element{margin-left: 5px; margin-top: 5px; width: 100%; height: 230px;}   
+  
+/* .box li{float:left;line-height: 30%;width:30%;height: 32.5%;border:2px #DDDDDD solid; position: relative}    */
+.element img{   
+ float: left;  
+ border: solid #555;   
+ width: 93%;   
+ height: 96%;   
+ text-align: center; 
+ position: relative;   
+ z-index: 1;   
+}   
+.right_side{
+  margin-top:10px; 
+  float: right; 
+  width: 100%;    
+}
+.right_up{
+  height: 50%;
+}
+.right_down{
+  padding-top: 100px;
+  width: 90%;
+  height: 33%;
+}
+video,img{
+  height: 75%;
+  width: 95%;
+}
+:focus, .focus {
+    background-color:#6699FF;
+    z-index: 3;
+    display:block;
+    left: 5px;
+    top: 5px;      
+    text-align: center;  
+    position: relative; 
+}
+.game-board{
+      display: grid;
+      width: 100%;
+      height: 95%;
+      grid-template-columns: 1fr 1fr 1fr ;
+      grid-row-gap: 15px;
+      overflow: hidden;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+}
+.outer {
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr ;
+  grid-gap: 5px;
+}
+</style>  
+</head>  
+<!--<script src="js/movement.js" type="text/javascript" charset="utf-8" ></script>
+-->
+<script type="text/javascript">
+
+var tabIndex = 1;
+var lastIndex = 0; //上一個index
+var isRightSide = false;
+var isBanner = false;
+var xtop = 0;
+
+function setParentColor(oldtd, newtd){
+  document.getElementById(oldtd).parentElement.classList.remove('focus');
+  document.getElementById(newtd).parentElement.classList.add('focus');
+}
+function goBanner(){
+  setParentColor("ele_" + lastIndex, "banner");
+  tabIndex = parseInt(document.getElementById("banner").dataset.index);
+  isRightSide = true;
+  isBanner = true;
+}
+function goPlayer(){
+  tabIndex = parseInt(document.getElementById("player").dataset.index);
+  console.log(tabIndex);
+  setParentColor("ele_" + lastIndex, "player");
+  isRightSide = true;
+}
+function windowScroll(upOrDown){
+  if(upOrDown === "up"){
+    var body = $("#x");
+    body.stop().animate({scrollTop:xtop}, 300, 'swing');
+  }
+  else{
+    var body = $("#x");
+    body.stop().animate({scrollTop:xtop}, 300, 'swing');
+  }
+}
+// 鍵盤事件
+document.onkeydown = function(event){
+// 相容 Mozilla Firefox
+  if (null == event) {
+    event = window.event;
+  }
+  else if (event.keyCode <= 40 && event.keyCode >= 37) {
+
+    keytd(event.keyCode);
+    // event.preventDefault();
+    return false;
+  }
+}
+  // 實現切換功能主要程式碼
+function keytd(key){
+// 左
+  if (key == 37) {
+    if(isRightSide){
+      if(!isBanner){
+        tabIndex = 3+(xtop/250)*3;
+        isRightSide = false;
+        document.getElementById("player").parentElement.classList.remove('focus');
+        setParentColor("player","ele_" + tabIndex,);
+      }
+      else{
+        tabIndex = 9+(xtop/250)*3;
+        if (tabIndex > lastLiIndex){
+          console.log('test')
+          tabIndex = lastLiIndex;
+        }
+        setParentColor("banner","ele_" + tabIndex);
+        isRightSide = false;
+        isBanner = false;
+      }
+    }
+    else{
+      tabIndex--;
+      if (null == document.getElementById(idlist[tabIndex]) || tabIndex%3 === 0) {
+        ++tabIndex;
+        return;
+      }
+      setParentColor("ele_" + (tabIndex + 1), "ele_" + tabIndex);
+    }
+  }
+  // 右
+  else if (key == 39) {
+    lastIndex = tabIndex;
+    ++tabIndex;
+    if (tabIndex%3 === 1 || null == document.getElementById("ele_" + tabIndex)){
+      --tabIndex;
+      console.log(tabIndex);
+      if(tabIndex !== 9+(xtop/250)*3){
+        if(tabIndex === lastLiIndex){
+          goBanner();
+        }
+        else{
+          goPlayer();
+        }
+      }
+      else{
+        goBanner();
+      }
+    }
+    else{
+      lastIndex = tabIndex;
+      setParentColor("ele_" + (tabIndex - 1), "ele_" + tabIndex);
+    }
+  }
+  // 上
+  else if (key == 38) { 
+    if (isRightSide){
+      if(tabIndex - 1 <= lastLiIndex ){ //|| null == document.getElementById("ele_" + tabIndex)   
+        return;
+      }
+      else{
+        tabIndex = tabIndex - 1;
+        setParentColor("banner","player")
+        isBanner = false;
+      }
+    }
+    else{
+      lastIndex = tabIndex; 
+      if (tabIndex > 0){
+        if(tabIndex === 3+(xtop/250)*3 || tabIndex === 2+(xtop/250)*3 || tabIndex === 1+(xtop/250)*3){
+          tabIndex = tabIndex - 3;
+          xtop-=250;
+          windowScroll("up");
+        }
+        else tabIndex = tabIndex - 3; 
+      }
+      if (null == document.getElementById(idlist[tabIndex])) {
+        xtop = 0;
+        tabIndex = tabIndex + 3;
+        return;
+      }
+      setParentColor("ele_" + (tabIndex + 3), "ele_" + tabIndex);
+    }
+  }
+  // 下
+  else if (key == 40) {
+    lastIndex = tabIndex;
+    tabIndex = tabIndex + 3;
+    if (isRightSide){
+      tabIndex = tabIndex - 3;
+      if(tabIndex + 1 >= parseInt(document.getElementById("banner").dataset.index)){ 
+        setParentColor("player","banner")
+        tabIndex = tabIndex + 1
+        isBanner = true;
+      }
+    }
+    else{
+      if ((tabIndex <= lastLiIndex) && tabIndex/9>1) {       
+        if (tabIndex === 9+((xtop+250)/250)*3 || tabIndex === 8+((xtop+250)/250)*3 || tabIndex === 7+((xtop+250)/250)*3) {
+            xtop+=250;
+            windowScroll("down");
+        }
+      }
+      if (null == document.getElementById(idlist[tabIndex]) || tabIndex>lastLiIndex) {
+        tabIndex = tabIndex - 3;
+        return;
+      }
+      setParentColor("ele_" + (tabIndex - 3), "ele_" + tabIndex);
+    }
+  }
+}
+  
+</script>
+<script type="text/javascript">
+  var lastLiIndex = 0;
+  var idlist= [];
+  const obj = {};
+function start(){
+    $.ajax({
+      type:'POST',
+      dataType: "json",
+      url: "/postJSON",
+      data: {},
+      success: jsonResp
+    });
+}
+function jsonResp(data) {
+    console.log("start");
+    var js = JSON.stringify(data);
+    if (js.length>0){
+      $.each(data, function( i, val ) {
+        console.log(i+1,val);
+        idlist[i+1] = "ele_"+(i+1);
+        obj[i+1] = "ele_"+(i+1);
+        $("#x").append("<div class=element data-index="+(i+1)+"> <img  id=ele_"+(i+1)+" src='./" + val + "'>  </div>");
+      });      
+      lastLiIndex = data.length;
+      idlist[data.length+1] = "player";
+      idlist[data.length+2] = "banner";
+      document.getElementById("player").setAttribute('data-index', lastLiIndex+1);
+      document.getElementById("banner").setAttribute('data-index', lastLiIndex+2);   
+      setParentColor("ele_2", "ele_1")
+    }    
+}
+
+
+$(document).ready(start);  
+
+</script>
+<body>  
+  <div class="outer">
+    <div class="game-board" id="x"></div>
+    <div></div>
+    <div class="inline right_side" >
+        <div class="right_up" >
+          <video controls id="player" class="element">
+            <source src="./mov_bbb.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="right_down" >
+          <img src="./banner.png" class="img element" id="banner">
+        </div>
+    </div> 
+  </div>
+</body>  
+</html>

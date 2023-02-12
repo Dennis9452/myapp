@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1280, user-scalable=no">
+<meta name="description" content="Example video player application using Tizen webapis.avplay" />
+
+<title>Tizen Video Example App</title>
+
+<script type='text/javascript' src='$WEBAPIS/webapis/webapis.js'></script>
+
+<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<!-- <script src="/js/videoPlayer.js"></script> -->
+<!-- <script src="/js/debug.js"></script> -->
+<!-- <script src="/js/main.js"></script> -->
+
+</head>
+
+<body style="background: skyblue;">
+    <div style="background: white;"></div>
+    <h1 id="h1" style="color:red">Tizen Video App</h1>
+    <h1 id="h2" style="color:yellow">Error message</h1>
+    <h3 id="h3">Video player based on Tizen webapis.avplay 123</h2>
+
+    <div class="left">
+        <h2>Available buttons/actions:</h2>
+        <div>
+            1 - XDD Toggle UHD content playback - use before starting playback and only for 4K content<br>
+            2 - display track info - while playback active<br>
+            3 - display stream properties - while playback active
+        </div>
+
+        <!-- <div class="video-controls">
+            <div class="play">PLAY</div>
+            <div class="stop">STOP</div>
+            <div class="pause">PAUSE</div>
+            <div class="ff">FF</div>
+            <div class="rew">REW</div>
+            <div class="fullscreen">TOGGLE FULLSCREEN MODE</div>
+        </div>
+        <fieldset id="logsFieldset">
+            <legend>Logs</legend>
+            <div class="logs" id="logs"></div>
+        </fieldset> -->
+
+    </div>
+
+    <!-- <div class="right">
+        <fieldset>
+            <legend>Video info</legend>
+            <div class="logs" id="info"></div>
+        </fieldset>
+    </div> -->
+    <div>
+        <video id="video" controls autoplay >
+            <source src="https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8" type="application/vnd.apple.mpegurl">
+        </video>
+    </div>
+    <script>
+        // window.addEventListener("message", handleMessage);
+        // function handleMessage(evt) {
+            
+        //     var msg = JSON.parse(evt.data);
+        //     if (typeof msg === "object" && msg.type && msg.type === "KeyboardEvent") {
+        //         console.log(msg.key,msg.type)
+        //         document.dispatchEvent("keydown", {key:msg.key});
+        //     }
+        // }
+
+        var videoElement = document.getElementById('video');
+        var logsFieldset = document.getElementById('logsFieldset');
+
+        var hls;
+        var video = document.getElementById('video');
+        var videoSrc = 'https://p-hebe.svc.litv.tv/hi/vod/KQbgYlxIgKw/litv-repub2-vod9530-000354M001-video=1448000-audio=128334.m3u8';
+        
+        var h1 = document.getElementById('h1');	
+        var h2 = document.getElementById('h2');
+        var h3 = document.getElementById('h3');
+        
+        registerKeys();
+        function registerKeys() {
+                var usedKeys = [
+                                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+                                'ChannelDown', 'ChannelUp', 
+                                'ColorF0Red', 'ColorF1Green', 'ColorF2Yellow', 'ColorF3Blue',
+                                'Info', 'Exit',
+                                'MediaFastForward', 'MediaPause', 'MediaPlay', 'MediaPlayPause', 'MediaRecord', 'MediaRewind', 'MediaStop'];
+
+                usedKeys.forEach(
+                    function (keyName) {
+                        // tizen.tvinputdevice.registerKey(keyName);
+                    }
+                );
+        }
+        
+
+        if(typeof webapis === "undefined") {
+            h1.innerText = "fail";
+        }else{
+            h1.innerText = webapis.network.getMac().replace(/\:/g,"").toUpperCase();
+        }
+        
+        document.addEventListener('keydown', function (e) {
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            h1.innerText = "in listener : " + e.key;
+            console.log(e.key + '--- Key code : ' + e.keyCode);
+            h3.innerText = e.key + '--- Key code : ' + e.keyCode; 
+            switch (e.keyCode) {
+                case 37: //LEFT arrow
+                break;
+                case 38: //UP arrow
+                break;
+                case 39: //RIGHT arrow
+                break;
+                case 40: //DOWN arrow
+                break;
+                case 13: //OK button
+                break;
+                case 49: //Key 1
+                changeSource("https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8");
+                break;
+                case 50: //Key 2
+                changeSource('https://p-hebe.svc.litv.tv/hi/vod/KQbgYlxIgKw/litv-repub2-vod9530-000354M001-video=1448000-audio=128334.m3u8');
+                break;
+                case 51: //Key 3
+                changeSource("https://p-hebe.svc.litv.tv/hi/vod/otn2n2GXmqU/4gtv-4gtv048-avc1_6000000=1-mp4a_134000_zho=7.m3u8");
+                break;
+                case 52: //Key 4
+                // deletePublicationFromBib("987987");
+                // changeSource("https://p-hebe.svc.litv.tv/hi/vod/MgOe8yLewQ8/litv-drama-vod56863-000001M001-video_eng=5931000-audio_eng=128385.m3u8");
+                break;
+                case 10009: //RETURN button
+                //	    		tizen.application.getCurrentApplication().exit();
+                break;
+                default:
+
+                console.log('Key code : ' + e.keyCode);
+                break;
+            }
+        });
+        var config = {
+            debug: true,
+        };
+        hls = new Hls(config);
+        changeSource(videoSrc);
+
+        h2.innerText = videoSrc;
+
+        function changeSource( url ){
+                
+                hls.loadSource(url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play();
+                });
+                
+                hls.on(Hls.Events.ERROR, function(event, data){
+                    if (data.fatal) {
+                            console.log("error", [(data.details || "").replace(/([A-Z])/g,"_$1").toUpperCase()]);
+                            h2.innerText = "\n" + data.type + "_" + data.details + "_" + data.fatal;
+                    }
+                });
+                h2.innerText = url;
+        }
+    </script>
+</body>
+</html>

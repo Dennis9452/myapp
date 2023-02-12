@@ -1,0 +1,39 @@
+{
+	"expires": 1647930433,
+	"sections": [
+		{
+			"title": "test tizen preview",
+			"tiles": [
+				{
+					"title":"惡棍追殺令",
+					"subtitle":"歐洲最驚心動魄的行刺計畫！《控制》羅莎蒙派克、《變形金剛4：絕跡重生》傑克雷諾聯合演出！",
+					"position":0,
+					"image_url":"http://static.svc.litv.tv/tv/launcher/recommend/e14251f73219010600c32558db53e0b8.jpg",
+					"action_data":"{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00241088\",\"categoryId\":\"1\",\"uri\":\"/vod/detail?type=movie&category_id=124&id=VOD00241088&utm_source=ATVhome&utm_medium=recommend&utm_campaign=惡棍追殺令\"}",
+					"is_playable":false,
+					"image_ratio":"4by3"
+				},
+				{
+					"title":"中國時裝劇",
+					"subtitle":"帥氣甜品師王博文+甜美設計師李覓爾，談愛、創業的青春勵志故事",
+					"position":0,
+					"image_url":"http://static.svc.litv.tv/tv/launcher/recommend/f960a2d70458e838f9ba79ac51f6d006.jpg",
+					"action_data":"{\"type\":\"VOD\",\"contentType\":\"VOD\",\"contentId\":\"VOD00245342\",\"categoryId\":\"\",\"uri\":\"/vod/player?&category_id=777&id=VOD00245342&utm_source=ATVhome&utm_medium=recommend&utm_campaign=中國時裝劇\"}",
+					"is_playable":false,
+					"image_ratio":"4by3"
+				},
+				{
+					"title":"破風",
+					"subtitle":"彭于晏、崔始源、竇驍接受單車魔鬼訓練，進行肉體改造，逼向體能極限！",
+					"position":0,
+					"image_url":"http://static.svc.litv.tv/tv/launcher/recommend/6307d2c17dd5c703ac29fdeddf07fd92.jpg",
+					"action_data":"{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00243994\",\"categoryId\":\"1\",\"uri\":\"/vod/detail?type=movie&category_id=126&id=VOD00243994&utm_source=ATVhome&utm_medium=recommend&utm_campaign=破風\"}",
+					"is_playable":false,
+					"image_ratio":"4by3"
+				}
+			],
+			"position": 0
+		}
+	],
+	"expires_only": true
+}

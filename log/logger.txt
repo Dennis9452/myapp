@@ -1,0 +1,154 @@
+
+LTINF00 OnlineStatusChangeAt 2021/3/26 下午5:21:50,offline
+LTINF00 OnlineStatusChangeAt 2021/3/26 下午5:21:57,online
+
+LTHIS00 OnlineStatusChangeAt 3/26/2021, 5:32:08 PM,offline
+LTHIS00 OnlineStatusChangeAt 3/26/2021, 5:32:10 PM,online
+
+LTINF00 OnlineStatusChangeAt 2021/3/26 下午8:13:20,offline
+LTINF00 OnlineStatusChangeAt 2021/3/29 上午9:07:33,online
+
+LTHIS00 OnlineStatusChangeAt 3/29/2021, 4:28:56 PM,offline
+LTHIS00 OnlineStatusChangeAt 3/29/2021, 4:29:00 PM,online
+
+LTHIS00 OnlineStatusChangeAt 3/29/2021, 4:29:00 PM,offline
+LTHIS00 OnlineStatusChangeAt 3/29/2021, 4:29:00 PM,online
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+waiting
+waiting
+playing
+seeked
+playing
+{"cdata":"imgImpression","ad_id":"5000001","ad_clip":"ams00149256","asset_id":"litv-vchannel7
+waiting
+waiting
+playing
+seeked
+playing
+{"cdata":"imgImpression","ad_id":"5000001","ad_clip":"ams00149256","asset_id":"litv-vchannel7
+VastTag: https://ib.adnxs.com/ptv?id=18239790
+{"cdata":"request","ad_id":"5000004|1|1|3","ad_clip":"ams00148394SS01406","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|1|1|3","ad_clip":"ams00148394SS01406","asset_id":"litv-vchannel7
+{"cdata":"request","ad_id":"5000004|1|2|3","ad_clip":"ams00148394SS01390","asset_id":"litv-vchannel7
+VastTag: https://ads.adaptv.advertising.com/a/h/nfGT9WQJTE2kBgqxq9RMbYCz1JHX1Tb7Cg19xw6Hn1U=?cb=1639634592772
+{"cdata":"error","ad_id":"5000004|1|2|3","ad_clip":"ams00148394SS01390|900","asset_id":"litv-vchannel7
+VastTag: https://pubads.g.doubleclick.net/gampad/ads?iu=/76486173/litv_webtv/litv_webtv_vodch_1
+VastTag: https://ads.adaptv.advertising.com/a/h/nfGT9WQJTE2kBgqxq9RMbayD8xG5dzJsLhTtBteusUQ=?cb=1639634593985
+{"cdata":"request","ad_id":"5000004|1|3|3","ad_clip":"ams00148394SS01394","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|1|3|3","ad_clip":"ams00148394SS01394","asset_id":"litv-vchannel7
+{"cdata":"request","ad_id":"5000004|2|1|3","ad_clip":"ams00148395SS01391","asset_id":"litv-vchannel7
+{"cdata":"error","ad_id":"5000004|2|1|3","ad_clip":"ams00148395SS01391|900","asset_id":"litv-vchannel7
+VastTag: https://secure.adnxs.com/ptv?id=20221141
+VastTag: https://pubads.g.doubleclick.net/gampad/ads?iu=/76486173/litv_webtv/litv_webtv_vodch_2
+{"cdata":"request","ad_id":"5000004|2|2|3","ad_clip":"ams00148395SS01407","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|2|2|3","ad_clip":"ams00148395SS01407","asset_id":"litv-vchannel7
+{"cdata":"request","ad_id":"5000004|2|3|3","ad_clip":"ams00148395SS01395","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|2|3|3","ad_clip":"ams00148395SS01395","asset_id":"litv-vchannel7
+VastTag: https://ads.adaptv.advertising.com/a/h/nfGT9WQJTE2kBgqxq9RMbbYE6drfVCYlIZoDV2BtXto=?cb=1639634594661
+{"cdata":"request","ad_id":"5000004|3|1|3","ad_clip":"ams00148397SS01392","asset_id":"litv-vchannel7
+{"cdata":"error","ad_id":"5000004|3|1|3","ad_clip":"ams00148397SS01392|900","asset_id":"litv-vchannel7
+VastTag: https://ads.aralego.com/ad_request?ver=UCX_M_Android-0.01
+VastTag: https://pubads.g.doubleclick.net/gampad/ads?iu=/76486173/litv_webtv/litv_webtv_vodch_3
+{"cdata":"request","ad_id":"5000004|3|2|3","ad_clip":"ams00148397SS01420","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|3|2|3","ad_clip":"ams00148397SS01420","asset_id":"litv-vchannel7
+VastTag: https://ads.adaptv.advertising.com/a/h/nfGT9WQJTE2kBgqxq9RMbQ_aTNf3nlh5jzLuEYwvgrk=?cb=1639634595558
+{"cdata":"request","ad_id":"5000004|3|3|3","ad_clip":"ams00148397SS01396","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|3|3|3","ad_clip":"ams00148397SS01396","asset_id":"litv-vchannel7
+VastTag: https://pubads.g.doubleclick.net/gampad/ads?iu=/76486173/litv_webtv/litv_webtv_vodch_4
+{"cdata":"request","ad_id":"5000004|4|1|3","ad_clip":"ams00148398SS01621","asset_id":"litv-vchannel7
+{"cdata":"error","ad_id":"5000004|4|1|3","ad_clip":"ams00148398SS01621|900","asset_id":"litv-vchannel7
+VastTag: https://ads.adaptv.advertising.com/a/h/nfGT9WQJTE2kBgqxq9RMbbIsNHC_N__Y4QIxCBeavwY=?cb=1639634596027
+{"cdata":"request","ad_id":"5000004|4|2|3","ad_clip":"ams00148398SS01602","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|4|2|3","ad_clip":"ams00148398SS01602","asset_id":"litv-vchannel7
+{"cdata":"request","ad_id":"5000004|5|1|3","ad_clip":"ams00148399SS01646","asset_id":"litv-vchannel7
+{"cdata":"error","ad_id":"5000004|5|1|3","ad_clip":"ams00148399SS01646|900","asset_id":"litv-vchannel7
+VastTag: https://pubads.g.doubleclick.net/gampad/ads?iu=/76486173/litv_webtv/litv_webtv_vodch_5
+VastTag: https://pubads.g.doubleclick.net/gampad/ads?iu=/76486173/litv_webtv/litv_webtv_vodch_6
+{"cdata":"request","ad_id":"5000004|5|2|3","ad_clip":"ams00148399SS01642","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|5|2|3","ad_clip":"ams00148399SS01642","asset_id":"litv-vchannel7
+{"cdata":"request","ad_id":"5000004|6|1|3","ad_clip":"ams00148400SS01823","asset_id":"litv-vchannel7
+{"cdata":"noAd","ad_id":"5000004|6|1|3","ad_clip":"ams00148400SS01823","asset_id":"litv-vchannel7
+VastTag: https://ads.adaptv.advertising.com/a/h/nfGT9WQJTE2kBgqxq9RMbQbRlJNIs2AfaLUwvQX7Hsg=?cb=1639634596732
+assetId: vod49123-000000M001_1500K
+{"cdata":"request","ad_id":"5000004|6|2|3","ad_clip":"ams00148400SS01786","asset_id":"litv-vchannel7
+{"cdata":"error","ad_id":"5000004|6|2|3","ad_clip":"ams00148400SS01786|900","asset_id":"litv-vchannel7
+{"cdata":"videoImpression","ad_id":"5000009","ad_clip":"ams00167447","asset_id":"litv-vchannel7
+waiting
+waiting
+playing
+seeked
+playing
+{"cdata":"imgImpression","ad_id":"5000001","ad_clip":"ams00149256","asset_id":"litv-vchannel7
+waiting
+playing
+waiting
+waiting
+playing
+seeked
+playing
+{"cdata":"imgImpression","ad_id":"5000001","ad_clip":"ams00149256","asset_id":"litv-vchannel7

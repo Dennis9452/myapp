@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="3.0">
+    <Ad>
+        <InLine>
+            <AdSystem>TestServer</AdSystem>
+            <AdTitle>Inline Supported</AdTitle>
+            <Error>
+                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/[ERRORCODE]]]>
+            </Error>
+            <Impression>
+                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/impression]]>
+            </Impression>
+            <Creatives>
+                <Creative>
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="creativeView">
+                                <![CDATA[/tracking/22_tracking/creativeView/]]>
+                            </Tracking>
+                            <Tracking event="start">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/start/[CACHEBUSTING]]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/q1/[CACHEBUSTING]]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/q2/[CACHEBUSTING]]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/q3/]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/q4/]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="00:00:02">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/progress/2s]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="00:00:03.456">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/progress/3.456s]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="78%">
+                                <![CDATA[http://172.21.103.141:8888/tracking/22_tracking/progress/78%]]>
+                            </Tracking>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile delivery="progressive" type="video/mp4" width="1280" height="720">
+                                <![CDATA[http://172.21.103.141:8887/media/abyogurt.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

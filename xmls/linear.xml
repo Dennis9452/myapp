@@ -1,0 +1,45 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+    <Ad id="321">
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>External NCA1C1L1 Linear Inline</AdTitle>
+            <Description><![CDATA[External NCA1C1L1 Linear Inline ad]]></Description>
+            <Error><![CDATA[http://172.21.103.141:8888/tracking/linear/[ERRORCODE]]]></Error>
+            <Impression><![CDATA[http://172.21.103.141:8888/tracking/linear/impression]]></Impression>
+            <Creatives>
+                <Creative id="123">
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="midpoint"><![CDATA[
+http://172.21.103.141:8888/tracking/linear/midpoint/
+TRANSACTIONID=[TRANSACTIONID]&
+UNIVERSALADID=[UNIVERSALADID]&
+ADPLAYHEAD=[ADPLAYHEAD]
+]]>                            </Tracking>
+                            <Tracking event="firstQuartile"><![CDATA[http://172.21.103.141:8888/tracking/linear/q1/[TIMESTAMP]]]></Tracking>
+                            <Tracking event="midpoint"><![CDATA[http://172.21.103.141:8888/tracking/linear/q2/[ADCOUNT]]]></Tracking>
+                            <Tracking event="thirdQuartile"><![CDATA[http://172.21.103.141:8888/tracking/linear/q3/]]></Tracking>
+                            <Tracking event="complete"><![CDATA[http://172.21.103.141:8888/tracking/linear/q4/]]></Tracking>
+                            <Tracking event="mute"><![CDATA[http://172.21.103.141:8888/tracking/linear/mute/]]></Tracking>
+                            <Tracking event="unmute"><![CDATA[http://172.21.103.141:8888/tracking/linear/unmute/]]></Tracking>
+                            <Tracking event="pause"><![CDATA[http://172.21.103.141:8888/tracking/linear/pause/]]></Tracking>
+                            <Tracking event="resume"><![CDATA[http://172.21.103.141:8888/tracking/linear/resume/]]></Tracking>
+                            <Tracking event="creativeView"><![CDATA[http://172.21.103.141:8888/tracking/linear/creativeView/]]></Tracking>
+                            <Tracking event="progress" offset="00:00:02"><![CDATA[http://172.21.103.141:8888/tracking/linear/progress/2s[CONTENTPLAYHEAD]]]></Tracking>
+                            <Tracking event="progress" offset="00:00:03.456"><![CDATA[http://172.21.103.141:8888/tracking/linear/progress/3.456s[CONTENTPLAYHEAD]]]></Tracking>
+                            <Tracking event="progress" offset="78%"><![CDATA[http://172.21.103.141:8888/tracking/linear/progress/78%[CONTENTPLAYHEAD]]]></Tracking>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[
+                                http://172.21.103.141:8887/test.mp4
+                                ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

@@ -1,0 +1,12 @@
+easy & fast         - probably not      貼紙的動畫看起來無法呈現
+most integrated     - workable          qrcode旋轉加上外框環繞字體
+most popular        - workable          背景右側移入跟qrcode 但qrcode用點狀方式慢慢出現有難度
+high impact         - workable          背景右側移入跟qrcode 但qrcode用點狀方式慢慢出現有難度
+most scannable      - probably not      player need to enlarge and shrink
+most flexible       - workable          結合旋轉跟放大再加上外框環繞字體 和 第3個出現的方法類似
+get ready           - workable          先一個倒數動畫再接旋轉
+drive urgency       - workable          外圈倒數加秒數倒數
+scna now            - probably workable 要先製作手機部分動畫(?) 移動部分沒什麼問題
+snowball impact     - probably not      雪球動畫有困難
+influencer driven   - workable          大qrcode在右側延伸出block社群帳號
+sports themed       - probably workable 籃球的動畫應該可達到(？ 剩下就是旋轉

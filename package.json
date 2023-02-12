@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "absurd-sql": "^0.0.53",
+    "body-parser": "*",
+    "express": "*",
+    "fs": "*",
+    "http": "*",
+    "https": "*",
+    "id3-reader": "^0.0.2",
+    "requests": "^0.3.0",
+    "sass": "^1.49.10"
+  }
+}

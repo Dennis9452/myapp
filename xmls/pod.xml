@@ -1,0 +1,126 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+    <Ad id="001" sequence="1">
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>External NCA1C1L1 Linear Inline</AdTitle>
+            <Description><![CDATA[External NCA1C1L1 Linear Inline ad]]></Description>
+            <Error><![CDATA[http://172.21.103.141:8888/tracking/pod/[ERRORCODE]]]></Error>
+            <Impression><![CDATA[http://172.21.103.141:8888/tracking/pod/impression]]></Impression>
+            <Creatives>
+                <Creative id="001" sequence="1">
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="start"><![CDATA[http://172.21.103.141:8888/tracking/pod/start/]]></Tracking>
+                            <Tracking event="firstQuartile"><![CDATA[http://172.21.103.141:8888/tracking/pod/q1/]]></Tracking>
+                            <Tracking event="midpoint"><![CDATA[http://172.21.103.141:8888/tracking/pod/q2/]]></Tracking>
+                            <Tracking event="thirdQuartile"><![CDATA[http://172.21.103.141:8888/tracking/pod/q3/]]></Tracking>
+                            <Tracking event="complete"><![CDATA[http://172.21.103.141:8888/tracking/pod/q4/]]></Tracking>
+                            <Tracking event="mute"><![CDATA[http://172.21.103.141:8888/tracking/pod/mute/]]></Tracking>
+                            <Tracking event="unmute"><![CDATA[http://172.21.103.141:8888/tracking/pod/unmute/]]></Tracking>
+                            <Tracking event="pause"><![CDATA[http://172.21.103.141:8888/tracking/pod/pause/]]></Tracking>
+                            <Tracking event="resume"><![CDATA[http://172.21.103.141:8888/tracking/pod/resume/]]></Tracking>
+                            <Tracking event="creativeView"><![CDATA[http://172.21.103.141:8888/tracking/pod/creativeView/]]></Tracking>
+                            <Tracking event="progress" offset="00:00:02"><![CDATA[http://172.21.103.141:8888/tracking/pod/progress/2s[CONTENTPLAYHEAD]]]></Tracking>
+                            <Tracking event="progress" offset="00:00:03.456"><![CDATA[http://172.21.103.141:8888/tracking/pod/progress/3.456s[CONTENTPLAYHEAD]]]></Tracking>
+                            <Tracking event="progress" offset="78%"><![CDATA[http://172.21.103.141:8888/tracking/pod/progress/78%[CONTENTPLAYHEAD]]]></Tracking>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[
+                                http://172.21.103.141:8887/file.mp4
+                                ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+    <Ad id="002" sequence="2">
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>External NCA1C1L1 Linear Inline</AdTitle>
+            <Description><![CDATA[External NCA1C1L1 Linear Inline ad]]></Description>
+            <Error><![CDATA[http://172.21.103.141:8888/tracking/pod/[ERRORCODE]]]></Error>
+            <Impression><![CDATA[http://172.21.103.141:8888/tracking/pod/impression]]></Impression>
+            <Creatives>
+                <Creative id="001" sequence="1">
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="start"><![CDATA[http://172.21.103.141:8888/tracking/pod/start/]]></Tracking>
+                            <Tracking event="firstQuartile"><![CDATA[http://172.21.103.141:8888/tracking/pod/q1/]]></Tracking>
+                            <Tracking event="thirdQuartile"><![CDATA[http://172.21.103.141:8888/tracking/pod/q3/]]></Tracking>
+                            <Tracking event="complete"><![CDATA[http://172.21.103.141:8888/tracking/pod/q4/]]></Tracking>
+                            <Tracking event="creativeView"><![CDATA[http://172.21.103.141:8888/tracking/pod/creativeView/]]></Tracking>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[
+                                http://172.21.103.141:8887/file.mp4
+                                ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+    <Ad id="003" sequence="3">
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>External NCA1C1L1 Linear Inline</AdTitle>
+            <Description><![CDATA[External NCA1C1L1 Linear Inline ad]]></Description>
+            <Error><![CDATA[http://172.21.103.141:8888/tracking/pod/[ERRORCODE]]]></Error>
+            <Impression><![CDATA[http://172.21.103.141:8888/tracking/pod/impression]]></Impression>
+            <Creatives>
+                <Creative id="001" sequence="1">
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="start"><![CDATA[http://172.21.103.141:8888/tracking/pod/start/]]></Tracking>
+                            <Tracking event="complete"><![CDATA[http://172.21.103.141:8888/tracking/pod/q4/]]></Tracking>
+                            <Tracking event="creativeView"><![CDATA[http://172.21.103.141:8888/tracking/pod/creativeView/]]></Tracking>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[
+                                http://172.21.103.141:8887/file.mp4
+                                ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+    <Ad id="100">
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>External NCA1C1L1 Linear Inline</AdTitle>
+            <Description><![CDATA[External NCA1C1L1 Linear Inline ad]]></Description>
+            <Error><![CDATA[http://172.21.103.141:8888/tracking/pod/[ERRORCODE]]]></Error>
+            <Impression><![CDATA[http://172.21.103.141:8888/tracking/pod/impression]]></Impression>
+            <Creatives>
+                <Creative id="57859154776" sequence="1">
+                    <Linear skipoffset="00:00:07.654">
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="progress" offset="00:00:02"><![CDATA[http://172.21.103.141:8888/tracking/pod/progress/2s[CONTENTPLAYHEAD]]]></Tracking>
+                            <Tracking event="progress" offset="00:00:03.456"><![CDATA[http://172.21.103.141:8888/tracking/pod/progress/3.456s[CONTENTPLAYHEAD]]]></Tracking>
+                            <Tracking event="progress" offset="78%"><![CDATA[http://172.21.103.141:8888/tracking/pod/progress/78%[CONTENTPLAYHEAD]]]></Tracking>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[
+                                http://172.21.103.141:8887/file.mp4
+                                ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

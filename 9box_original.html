@@ -1,0 +1,344 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>九宫格布局</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+</head>  
+<body>  
+<html>  
+<head>  
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">  
+/** 重置浏览器默认标签样式 */ 
+
+
+html, body { width:100%;height: 100%; max-width:100%;} 
+.outer{
+  width:100%;height: 100%;
+  display: inline;
+  position: relative;
+} 
+ul,li{margin:0;padding:0;}   
+.xttblog { 
+ float: left;   
+ width: 50%; 
+ height: 75%;
+ margin-top:50px;   
+ margin-left: auto;   
+ margin-right: auto; 
+ overflow:hidden;  
+}   
+.box{margin-left: 5px; margin-top: 5px; width: 100%; height: 100%;list-style-type:none;}   
+  
+.box li{float:left;line-height: 30%;width:30%;height: 32.5%;border:2px #DDDDDD solid; position: relative}   
+.box li img{   
+ display:block; 
+ float: left;  
+ border: solid #555;   
+ width: 100%;   
+ height: 100%;   
+ text-align: center;   
+ margin-left: -5px;   
+ margin-top: -5px;   
+ position: relative;   
+ z-index: 1;   
+}    
+.right_side{
+  margin-top:50px; 
+  float: right; 
+  width: 50%;    
+}
+.right_up{
+  padding-bottom: 200px;
+}
+.right_down{
+  width: 90%;
+  height: 50%;
+}
+video,img{
+  width: 95%;
+}
+:focus, .focus {
+    background-color:#6699FF;
+    z-index: 3;
+    display:block;
+    left: 5px;
+    top: 5px;      
+    text-align: center;  
+    position: relative;  
+}
+
+</style>  
+</head>  
+<script src="js/movement.js" type="text/javascript" charset="utf-8" ></script>
+<script type="text/javascript">
+  var lastLiIndex = 0;
+$(document).ready(function(){
+    console.log("start");
+    $.ajax({
+      type:'POST',
+      dataType: "json",
+      url: "/postJSON",
+      data: {},
+      success: function (data) {
+          console.log(JSON.stringify(data));
+          if (data.length>0){
+            $.each( data, function( i, val ) {
+              console.log(i,val);
+              $("#x").append("<li tabIndex="+(i+1)+" id=li"+(i+1)+"> <img src='./" + val + "'> </li>");
+            });
+            lastLiIndex =data.length;
+            $("#player").attr('tabIndex', (data.length+1));
+            $("#banner").attr('tabIndex', (data.length+2));
+            $("#li1").focus();
+            testFocus("#li1");
+            // var focus_element = document.activeElement.id;          
+          }    
+      }
+    });
+
+});  
+var focus_element = document.activeElement.id;
+console.log(focus_element.clientHeight);
+function testFocus(liID) { 
+    $(liID).focus(function (e) {
+           $(this).addClass('focus');
+    });
+    $(liID).blur(function (e) {
+       $(this).removeClass('focus');
+    });
+}
+function getPosition (element) {
+  var x = 0;
+  var y = 0;
+  // 搭配上面的示意圖可比較輕鬆理解為何要這麼計算
+  while ( element ) {
+    console.log("offset: ",element.offsetLeft,"client",element.clientLeft,element)
+    x += element.offsetLeft  + element.clientLeft;
+    y += element.offsetTop + element.clientTop;
+
+    element = element.offsetParent;
+  }
+
+  return { x: x, y: y };
+}
+
+</script>
+<body>  
+  <div class="outer">
+    <div id="9box" class="xttblog inline" autofocus >  
+      <ul id="x" class="box"></ul>  
+    </div> 
+    <div class="inline right_side" >
+        <div class="right_up" >
+          <video controls id="player">
+            <source src="./mov_bbb.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="right_down">
+          <img src="./banner.png" class="img" id="banner">
+        </div>
+    </div> 
+  </div>
+
+</body>   
+
+<script type="text/javascript">
+
+var tabIndex = 1;
+var trid = "li";
+var xtop = 0;
+var lastIndex = 0; //上一個index
+var last9BoxIndex = 0; //九宮格最後移出的index
+var isRightSide = false;
+// 鍵盤事件
+document.onkeydown = function(event){
+  //event.preventDefault();
+// 相容 Mozilla Firefox
+  if (null == event) {
+    event = window.event;
+  }
+  // if (event.keyCode == 13) {
+  //  p13key();
+  // }
+  else if (event.keyCode <= 40 && event.keyCode >= 37) {
+    event.preventDefault();
+    keytd(event.keyCode);
+  }
+}
+// 按下回車鍵
+// function p13key(){
+// var tdid = trid + tabIndex;
+// var tdtitle = document.getElementById(tdid).getAttribute("title");
+// var pos = tdtitle.indexOf("|");
+// var seatname = tdtitle.substring(0, pos);
+// var seatid = tdtitle.substring(pos + 1, tdtitle.length);
+// window.alert(seatname + "," + seatid);
+// }
+// 變換顏色
+function setcolor(oldtd, newtd){
+  document.getElementById(oldtd).style.backgroundColor="#FFFFFF";
+  document.getElementById(newtd).style.backgroundColor="#6699FF";    
+}
+
+  // 實現切換功能主要程式碼
+function keytd(key){
+// 左
+  if (key == 37) {
+    // var focus_element = document.activeElement.id;
+    // console.log(focus_element);
+    lastIndex = tabIndex;
+    --tabIndex;
+    var elem = document.querySelector('#li'+tabIndex);
+    var position = getPosition(elem);
+    //alert("座標: " + position.x + ', ' + position.y);
+    if(isRightSide){
+      tabIndex = last9BoxIndex;
+      console.log("tab_in"+tabIndex)
+      $("#"+trid + tabIndex).focus();
+      testFocus("#"+trid + tabIndex);
+      isRightSide = false;
+    }
+    else{
+      if (null == document.getElementById(trid + tabIndex) || tabIndex%3 === 0) {
+        ++tabIndex;
+        $("#"+trid + tabIndex).focus();
+        testFocus("#"+trid + tabIndex);
+        return;
+      }
+      $("#"+trid + tabIndex).focus();
+        testFocus("#"+trid + tabIndex);
+    }
+    //setcolor(trid + (tabIndex + 1), trid + tabIndex);
+    // if (tabIndex%3 === 0 ){
+    //   ++tabIndex;
+    //   $("#"+trid + tabIndex).focus();
+    //   testFocus("#"+trid + tabIndex);
+    //   //console.log("player_tab"+tabIndex,"li"+lastLiIndex,"last"+lastIndex); 
+    // }
+  }
+  // 右
+  else if (key == 39) {
+    lastIndex = tabIndex;
+    ++tabIndex;
+    var elem = document.querySelector('#li'+tabIndex);
+    var position = getPosition(elem);
+    //alert("座標: " + position.x + ', ' + position.y);
+    if (tabIndex%3 === 1 || null == document.getElementById(trid + tabIndex)){
+      --tabIndex;
+      if(tabIndex%9 === 0){
+        $("#banner").focus();
+        tabIndex = $("#banner").attr('tabIndex') ;
+        isRightSide = true;
+        testFocus("#banner");
+        //console.log("last"+lastIndex);
+        last9BoxIndex = lastIndex;
+      } 
+      else{
+        $("#player").focus();
+        tabIndex = $("#player").attr('tabIndex') ;
+        isRightSide = true;
+        testFocus("#player");
+        //console.log("last"+lastIndex);
+        last9BoxIndex = lastIndex;
+      }
+    }
+    else{
+      $("#"+trid + tabIndex).focus();
+      lastIndex = tabIndex;
+      testFocus("#"+trid + tabIndex);
+    }
+    //setcolor(trid + (tabIndex - 1), trid + tabIndex);
+  }
+  // 上
+  else if (key == 38) {
+    lastIndex = tabIndex;
+    tabIndex = tabIndex - 3;  
+    var elem = document.querySelector('#li'+tabIndex);
+    var position = getPosition(elem);
+    //alert("座標: " + position.x + ', ' + position.y);
+    if (isRightSide){
+      tabIndex = tabIndex + 3; 
+      if(tabIndex - 1 <= lastLiIndex ){ //|| null == document.getElementById(trid + tabIndex)  
+        $("#player").focus();
+        testFocus("#player");
+      }
+      else{
+        tabIndex = tabIndex - 1;
+        $("#player").focus();
+        testFocus("#player");
+      }
+    }
+    else{
+      if ((tabIndex%9===7 || tabIndex%9===8 || tabIndex%9===0) && tabIndex/9>=1)  {
+        if(tabIndex=== 1  || tabIndex%6===2 || tabIndex%6===3) xtop = 0;
+        var body = $("html, body, #9box");
+        //xtop = $("#li"+(tabIndex + 3)).offset().top;
+        //xtop -= 600;
+        //body.stop().animate({scrollTop:xtop}, 500, 'swing');
+        $("#li"+tabIndex).scrollTop($("#li"+tabIndex));
+        console.log("up:"+xtop);
+        //xtop = $("#li"+(tabIndex)).offset().top;
+      }
+      if (null == document.getElementById(trid + tabIndex)) {
+        //xtop = 0;
+        tabIndex = tabIndex + 3;
+        $("#li"+tabIndex).scrollTop();
+        return;
+      }
+      $("#"+trid + tabIndex).focus();
+      testFocus("#"+trid + tabIndex);
+    }
+    //setcolor(trid + (tabIndex + 3), trid + tabIndex);
+  }
+  // 下
+  else if (key == 40) {
+    lastIndex = tabIndex;
+    tabIndex = tabIndex + 3;
+    if (isRightSide){
+      tabIndex = tabIndex - 3;
+      if(tabIndex + 1 >= $("#banner").attr('tabIndex')){ 
+        tabIndex = $("#banner").attr('tabIndex');
+        $("#banner").focus();
+        testFocus("#banner");
+        console.log("tab:"+tabIndex,"banner:"+$("#banner").attr('tabIndex'));
+      }
+      // else{
+      //   tabIndex = tabIndex + 1;
+      //   $("#banner").focus();
+      //   testFocus("#banner");
+      //   console.log("tab:"+tabIndex,"last:"+lastIndex); 
+      // } 
+    }
+    else{
+      // if ((tabIndex%9===1 || tabIndex%9===2 || tabIndex%9===3) && tabIndex/9>=1) { 
+      //   //xtop += 600;
+      //   //var body = $("html, body, #9box");
+
+      //   //body.stop().animate({scrollTop:xtop}, 500, 'swing');
+      //   //lastScroll = xtop;
+      //   //$("#li"+tabIndex).scrollTop($("#li"+tabIndex));
+      //   $("#"+trid + tabIndex).focus();
+      //   testFocus("#"+trid + tabIndex);
+      // }
+      // else{
+        $("#"+trid + tabIndex).focus();
+        testFocus("#"+trid + tabIndex);
+        console.log("down:"+xtop);
+      //}  
+      if (null == document.getElementById(trid + tabIndex) || tabIndex>lastLiIndex) {
+        xtop = xtop;
+         tabIndex = tabIndex - 3;
+        $("#"+trid + tabIndex).focus();
+        testFocus("#"+trid + tabIndex);
+        //tabIndex = lastIndex;
+        return;
+      }
+    }
+    //setcolor(trid + (tabIndex - 3), trid + tabIndex);
+  }
+}
+</script>
+</html>

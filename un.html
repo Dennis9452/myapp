@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="js/data.js" type="module" ></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	<script type="text/javascript">
+		var tmp;
+		var url = "google.com";
+		function start(){
+		 //    $.ajax({
+		 //      type:'get',
+		 //      dataType: "json",
+		 //      url: url,
+		 //      data: {},
+		 //      success: 	resp,
+		 //      error: function(xhr, textStatus, error){
+			//       console.log(xhr.statusText);
+			//       console.log(textStatus);
+			//       console.log(error);
+			//   }
+
+			// });
+			$.getJSON(url, resp)
+			.fail(function(xhr, textStatus, error){
+			      console.log(xhr.statusText);
+			      console.log(textStatus);
+			      console.log(error);
+			  });
+		}
+		function resp(data){
+				if(data === ""){
+					console.log(xhr.statusText);
+				    console.log(textStatus);
+				    console.log(error);
+				}
+				console.log(data)
+		      	document.getElementById("x").innerHTML = data.message;
+		}
+		$(document).ready(start); 
+
+	</script>
+
+</head>
+<body>
+	<h1>Import Testing</h1>
+	<div id="x">original></div>
+</body>
+<script type="text/javascript">
+		// var templet = 	'<p>新用戶免費看：<br />新用戶首月免費看。</p>' +
+		// 			'<p>購買：<br />免費期滿未取消訂閱，將自動以每月$99續訂，採帳單支付，若不足月，則依當月天數比例計價。</p>' +
+		// 			'<p>付費方式：<br />本服務將採用收視帳單支付之，適用於逐次雙月（季）預繳，以月計費。</p>'+
+		// 			'<p>退訂服務：<br />如需取消續訂，請電洽客服中心辦理。</p>';
+		// document.getElementById("x").innerHTML = templet;
+
+	</script>
+</html>
+
+

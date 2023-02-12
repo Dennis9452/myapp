@@ -1,0 +1,67 @@
+.container {
+    width: 300px;
+    border: black 1px solid;
+}
+
+.title {
+    position: relative;
+    width: 300px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#year_month {
+    width: 100px;
+    display: inline-block;
+    margin: 0 40px;
+    background-color: #999999;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.list .date {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.list .month {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+}
+
+.list .year {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+}
+
+.list .date.grayDate,
+.list .year.grayDate {
+    color: #eeeeee;
+}
+
+.date.today {
+    color: #db3d44;
+}
+
+.date.active,
+.date.today.active {
+    background-color: #db3d44;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.month.active,
+.year.active {
+    background-color: #db3d44;
+    border-radius: 75px;
+}

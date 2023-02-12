@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+  
+   
+</head>
+<body>
+  <video id="my_video_1" class="" controls preload="auto" autoplay muted
+  >
+    <source src="http://127.0.0.1:8800/file/uniqlo.mp4">
+  </video> 
+<script>
+	
+
+var player = document.getElementById('my_video_1');
+if(testing("test")){
+	console.log("true");
+};
+
+player.play();
+status = "play";
+
+document.addEventListener("keydown",function(e){
+	e.stopPropagation();
+	e.stopImmediatePropagation();
+
+	switch(event.keyCode){
+		case 39:
+			player.currentTime = player.currentTime + parseFloat(10000) / 1000;
+			// player.seek(player.getDuration()+10);
+		break;
+		case 37:
+		player.currentTime = player.currentTime - parseFloat(10000) / 1000;
+			// player.seek(player.getDuration() -10);
+		break;
+		case 13:
+			if (status == "play") {
+				player.pause();
+				status = "pause";
+			} else {
+				player.play();
+				status = "play";
+			}
+		 	
+		break;
+	}
+});
+function testing(x){
+	if(x){
+		return x;
+	}
+}
+
+</script>
+  
+</body>
+</html>

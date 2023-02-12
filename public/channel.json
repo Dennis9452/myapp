@@ -1,0 +1,52 @@
+{"expires":4106938892,
+	"sections":[
+		{
+			"title":"Channel",
+			"tiles":[
+				{"title":"民視台灣台","position":"0","image_url":"https://cdnstatic-staging.svc.litv.tv/tv_vod_channel_value_purchase_4.jpg","action_data":"{\"type\":\"CHANNEL\",\"contentType\":\"CHANNEL\",\"channelNo\":\"4\"}","is_playable":false,"image_ratio":"2by3"},
+				{"title":"非凡新聞台","position":"0","image_url":"https://cdnstatic-staging.svc.litv.tv/tv_vod_channel_value_purchase_4.jpg","action_data":"{\"type\":\"CHANNEL\",\"contentType\":\"CHANNEL\",\"channelNo\":\"58\"}","is_playable":false,"image_ratio":"2by3"},
+				{"title":"台視新聞","position":"0","image_url":"https://cdnstatic-staging.svc.litv.tv/tv_vod_channel_value_purchase_4.jpg","action_data":"{\"type\":\"CHANNEL\",\"contentType\":\"CHANNEL\",\"channelNo\":\"59\"}","is_playable":false,"image_ratio":"2by3"}
+			],
+		},
+		{
+			"title":"電影",
+			"tiles":[
+				{"title":"南方車站的聚會","subtitle":"Wild Goose Lake","position":"0","image_url":"https://cdnstatic.svc.litv.tv/42367-000000-346349.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00177445\",\"categoryId\":\"164\"}","is_playable":false,"image_ratio":"2by3"},
+				{"title":"鋼鐵勳章","subtitle":"The Last Full Measure","position":"0","image_url":"https://cdnstatic.svc.litv.tv/43162-000000-364088.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00183829\",\"categoryId\":\"164\"}","is_playable":false,"image_ratio":"2by3"},
+				{"title":"大畫特務","subtitle":"Hitman: Agent Jun","position":"0","image_url":"https://cdnstatic.svc.litv.tv/42386-000000-347765.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"movie\",\"contentId\":\"VOD00177538\",\"categoryId\":\"164\"}","is_playable":false,"image_ratio":"2by3"}
+			],
+		},
+		{
+			"title":"戲劇",
+			"tiles":[
+				{"title":"有瑕疵的人們","subtitle":"全 32 集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/43427-000001-372068.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00186208\",\"categoryId\":\"303\"}","is_playable":false,"image_ratio":"4by3"},
+				{"title":"大明風華","subtitle":"全 62 集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/42820-000001-367168.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00180781\",\"categoryId\":\"303\"}","is_playable":false,"image_ratio":"4by3"},
+				{"title":"幸福還會來敲門","subtitle":"第20集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/43437-000020-372042.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"drama\",\"contentId\":\"VOD00186343\",\"categoryId\":\"303\"}","is_playable":false,"image_ratio":"4by3"}
+			],
+		},
+		{
+			"title":"動漫",
+			"tiles":[
+				{"title":"在地下城尋求邂逅是否搞錯了什麼 ─ 獵戶座之箭","subtitle":"劇場版 ダンジョンに出会いを求めるのは間違っているだろうか ─ オリオンの矢 ─","position":"0","image_url":"https://cdnstatic.svc.litv.tv/42689-000000-363141.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"comic\",\"contentId\":\"VOD00179919\",\"categoryId\":\"305\"}","is_playable":false,"image_ratio":"2by3"},
+				{"title":"輝夜姬想讓人告白～天才們的戀愛頭腦戰～ 第二季","subtitle":"全 12 集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/37579-020000-342231.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"comic\",\"contentId\":\"VOD00175041\",\"categoryId\":\"305\"}","is_playable":false,"image_ratio":"2by3"},
+				{"title":"魯邦三世 Part4","subtitle":"全 26 集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/42561-040000-362946.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"comic\",\"contentId\":\"VOD00179999\",\"categoryId\":\"305\"}","is_playable":false,"image_ratio":"2by3"}
+			],
+		},
+		{
+			"title":"綜藝",
+			"tiles":[
+				{"title":"綜藝大集合","subtitle":"遊戲超犯規 張家瑋黃沐妍兩人集合來比腿 第969集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/9838-000969-371053.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"show\",\"contentId\":\"VOD00032026\",\"categoryId\":\"306\"}","is_playable":false,"image_ratio":"4by3"},
+				{"title":"綜藝玩很大","subtitle":"天龍人與野人的生存之戰，正式開始！台灣 台南(下) 第308集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/31571-000308-367428.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"show\",\"contentId\":\"VOD00099845\",\"categoryId\":\"306\"}","is_playable":false,"image_ratio":"4by3"},
+				{"title":"天才衝衝衝","subtitle":"隊友一步錯 讓乃哥猜題步步錯 第733集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/10807-000733-371256.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"show\",\"contentId\":\"VOD00040308\",\"categoryId\":\"306\"}","is_playable":false,"image_ratio":"4by3"}
+			],
+		},
+		{
+			"title":"蒙福",
+			"tiles":[
+				{"title":"關鍵三十","subtitle":"第123集　扎根在服事中","position":"0","image_url":"https://cdnstatic.svc.litv.tv/42726-000123-357269.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"blessedlife\",\"contentId\":\"VOD00179997\",\"categoryId\":\"308\"}","is_playable":false,"image_ratio":"4by3"},
+				{"title":"轉轉發現愛","subtitle":"全 123 集","position":"0","image_url":"https://cdnstatic.svc.litv.tv/36362-000001-241407.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"blessedlife\",\"contentId\":\"VOD00128825\",\"categoryId\":\"308\"}","is_playable":false,"image_ratio":"4by3"},
+				{"title":"生命的贏家","subtitle":"第95集　脫離仇敵的攪擾","position":"0","image_url":"https://cdnstatic.svc.litv.tv/34849-000095-367967.jpg","action_data":"{\"type\":\"VOD\",\"contentType\":\"blessedlife\",\"contentId\":\"VOD00117736\",\"categoryId\":\"308\"}","is_playable":false,"image_ratio":"4by3"}
+			],
+		}
+	]
+}

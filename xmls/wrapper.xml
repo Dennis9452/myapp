@@ -1,0 +1,63 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+    <Ad id="697203496">
+        <Wrapper>
+            <AdSystem>GDFP</AdSystem>
+            <VASTAdTagURI>
+                <![CDATA[http://172.21.103.141:8888/linear.xml]]>
+            </VASTAdTagURI>
+            <Error>
+                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/[ERRORCODE]]]>
+            </Error>
+            <Impression>
+                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/impression]]>
+            </Impression>
+            <Creatives>
+                <Creative id="57859154776" sequence="1">
+                    <Linear>
+                        <TrackingEvents>
+                            <Tracking event="start">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/start/[CACHEBUSTING]]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/q1/[CACHEBUSTING]]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/q2/]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/q3/]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/q4/]]>
+                            </Tracking>
+                            <Tracking event="mute">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/mute/]]>
+                            </Tracking>
+                            <Tracking event="unmute">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/unmute/]]>
+                            </Tracking>
+                            <Tracking event="pause">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/pause/]]>
+                            </Tracking>
+                            <Tracking event="resume">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/resume/]]>
+                            </Tracking>
+                            <Tracking event="creativeView">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/creativeView/]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="00:00:08">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/progress/2s]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="00:00:07.654">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/progress/3.456s]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="32%">
+                                <![CDATA[http://172.21.103.141:8888/tracking/Wrapper/progress/78%]]>
+                            </Tracking>
+                        </TrackingEvents>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </Wrapper>
+    </Ad>
+</VAST>

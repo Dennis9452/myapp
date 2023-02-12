@@ -1,0 +1,5 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+    <Error>
+        <![CDATA[http://172.21.103.141:8888/tracking/empty/error/[ERRORCODE]]]>
+    </Error>
+</VAST>

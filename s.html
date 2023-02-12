@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	
+	
+</head>
+<style type="text/css" media="screen">
+.table-wrap{
+	display: table;
+	width:300px; height:300px; 
+	border:solid 2px #ccc;
+}
+.table-cell {
+	display:table-cell; 
+	vertical-align:middle; 
+	text-align:center;
+}
+#x{
+	color: gray;
+}
+</style>
+<body>
+	<div id="x">tersinfe</div>
+	
+	<input type="button" id="jump" value="random" >
+
+</body>
+<script type="text/javascript">
+var z ;
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function start(){
+	var program;
+	$.get("http://172.21.103.141:8800/file",
+		function(data){
+			var num = data.sections.length
+			var category = getRandomInt(num)
+			var program_len = data.sections[category].tiles.length
+			var tiles_num = getRandomInt(program_len)
+			console.log("tiles_num",data.sections[category].tiles[tiles_num])
+			program = data.sections[category].tiles[tiles_num].action_data
+		}
+	).done(function(){
+		z = program;
+	})
+	
+}
+window.onload = function(){
+	start();
+	// console.log("s",start())
+}
+document.getElementById("jump").addEventListener("click",function(){
+	console.log(z);	
+	navigate(z)
+})
+
+
+function navigate(actionData) {
+	// console.log("actionData",actionData)
+    actionData = JSON.parse(actionData);
+    // console.log("actionData",actionData)
+    var paraObj, gotoUrl;
+    try{
+    	paraObj = actionData;
+    	// paraObj = JSON.parse(actionData.values);
+    	console.log("paraObj",paraObj)
+    	if(paraObj.type == "CHANNEL") {
+        	gotoUrl = "channel?" + paraObjToChannelQuerys(paraObj);
+        }else{
+        	gotoUrl = "vod/detail?" + paraObjToVodQuerys(paraObj);
+        }
+    }catch (e) {
+    	gotoUrl = actionData.values;
+	}
+    // window.location.replace("http://127.0.0.1:8080/LTINF00/" + encodeURI(gotoUrl))
+    window.location.href = "http://127.0.0.1:8080/LTINF00/" + encodeURI(gotoUrl);
+}
+
+function paraObjToVodQuerys(paraObj) {
+	var querys = [];
+	if(paraObj.contentType) querys.push("type=" + paraObj.contentType);
+	if(paraObj.categoryId) querys.push("category_id=" + paraObj.categoryId);
+	if(paraObj.contentId) querys.push("id=" + paraObj.contentId);
+	if(paraObj.categoryTitle) querys.push("brc=" + paraObj.categoryTitle);
+	return querys.join("&");
+}
+
+function paraObjToChannelQuerys(paraObj){
+	var querys = [];
+	if(paraObj.channelNo) querys.push("no=" + paraObj.channelNo);
+	if(paraObj.catalogId) querys.push("catalog=" + paraObj.catalogId);
+	return querys.join("&");
+}
+</script>
+
+</html>

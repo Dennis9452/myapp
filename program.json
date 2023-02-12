@@ -1,0 +1,166 @@
+{
+  "expires": 1599595200,
+  "sections": [
+    {
+      "title": "電影",
+      "tiles": [
+        {
+          "title": "星際救援",
+          "subtitle": "Ad Astra",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/41338-000000-325620.jpg",
+          "action_data": "{\"contentType\":\"movie\",\"contentId\":\"VOD00169050\",\"categoryId\":\"164\"}",
+          "is_playable": false,
+          "image_ratio": "2by3"
+        },
+        {
+          "title": "復仇母親",
+          "subtitle": "Bring Me Home",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/41824-000000-333674.jpg",
+          "action_data": "{\"contentType\":\"movie\",\"contentId\":\"VOD00173252\",\"categoryId\":\"164\"}",
+          "is_playable": false,
+          "image_ratio": "2by3"
+        },
+        {
+          "title": "終極獵殺令",
+          "subtitle": "Trauma Center",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/42494-000000-349850.jpg",
+          "action_data": "{\"contentType\":\"movie\",\"contentId\":\"VOD00178635\",\"categoryId\":\"164\"}",
+          "is_playable": false,
+          "image_ratio": "2by3"
+        }
+      ]
+    },
+    {
+      "title": "戲劇",
+      "tiles": [
+        {
+          "title": "有瑕疵的人們",
+          "subtitle": "全 32 集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/43427-000001-372068.jpg",
+          "action_data": "{\"contentType\":\"drama\",\"contentId\":\"VOD00186208\",\"categoryId\":\"303\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        },
+        {
+          "title": "大明風華",
+          "subtitle": "全 62 集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/42820-000001-367168.jpg",
+          "action_data": "{\"contentType\":\"drama\",\"contentId\":\"VOD00180781\",\"categoryId\":\"303\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        },
+        {
+          "title": "幸福還會來敲門",
+          "subtitle": "全 44 集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/43437-000001-370429.jpg",
+          "action_data": "{\"contentType\":\"drama\",\"contentId\":\"VOD00186343\",\"categoryId\":\"303\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        }
+      ]
+    },
+    {
+      "title": "動漫",
+      "tiles": [
+        {
+          "title": "在地下城尋求邂逅是否搞錯了什麼 ─ 獵戶座之箭",
+          "subtitle": "劇場版 ダンジョンに出会いを求めるのは間違っているだろうか ─ オリオンの矢 ─",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/42689-000000-363141.jpg",
+          "action_data": "{\"contentType\":\"comic\",\"contentId\":\"VOD00179919\",\"categoryId\":\"305\"}",
+          "is_playable": false,
+          "image_ratio": "2by3"
+        },
+        {
+          "title": "輝夜姬想讓人告白～天才們的戀愛頭腦戰～ 第二季",
+          "subtitle": "全 12 集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/37579-020000-342231.jpg",
+          "action_data": "{\"contentType\":\"comic\",\"contentId\":\"VOD00175041\",\"categoryId\":\"305\"}",
+          "is_playable": false,
+          "image_ratio": "2by3"
+        },
+        {
+          "title": "魯邦三世 Part4",
+          "subtitle": "全 26 集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/42561-040000-362946.jpg",
+          "action_data": "{\"contentType\":\"comic\",\"contentId\":\"VOD00179999\",\"categoryId\":\"305\"}",
+          "is_playable": false,
+          "image_ratio": "2by3"
+        }
+      ]
+    },
+    {
+      "title": "綜藝",
+      "tiles": [
+        {
+          "title": "綜藝大集合",
+          "subtitle": "投手林克謙慘遭back to back 換來梓甯 茵茵 東東一起玩 第971集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/9838-000971-374448-S.jpg",
+          "action_data": "{\"contentType\":\"show\",\"contentId\":\"VOD00032026\",\"categoryId\":\"306\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        },
+        {
+          "title": "綜藝玩很大",
+          "subtitle": "天龍人與野人的生存之戰，正式開始！台灣 台南(下) 第308集",
+          "position": 0,
+          "image_url": "http://83f1ab9a05de.ngrok.io/test-S.jpg",
+          "action_data": "{\"contentType\":\"show\",\"contentId\":\"VOD00099845\",\"categoryId\":\"306\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        },
+        {
+          "title": "天才衝衝衝",
+          "subtitle": "凱希靈感源源不絕 風暴答題震全場 第735集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/10807-000735-374807.jpg",
+          "action_data": "{\"contentType\":\"show\",\"contentId\":\"VOD00040308\",\"categoryId\":\"306\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        }
+      ]
+    },
+    {
+      "title": "蒙福",
+      "tiles": [
+        {
+          "title": "關鍵三十",
+          "subtitle": "第123集　扎根在服事中",
+          "position": 0,
+          "image_url": "http://83f1ab9a05de.ngrok.io/test.jpg",
+          "action_data": "{\"contentType\":\"blessedlife\",\"contentId\":\"VOD00179997\",\"categoryId\":\"308\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        },
+        {
+          "title": "轉轉發現愛",
+          "subtitle": "全 123 集",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/36362-000001-241407-S.jpg",
+          "action_data": "{\"contentType\":\"blessedlife\",\"contentId\":\"VOD00128825\",\"categoryId\":\"308\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        },
+        {
+          "title": "生命的贏家",
+          "subtitle": "第96集　邁入未知之境",
+          "position": 0,
+          "image_url": "https://cdnstatic-staging.svc.litv.tv/34849-000096-374581-S.jpg",
+          "action_data": "{\"contentType\":\"blessedlife\",\"contentId\":\"VOD00117736\",\"categoryId\":\"308\"}",
+          "is_playable": false,
+          "image_ratio": "4by3"
+        }
+      ]
+    }
+  ],
+  "expires_only": true
+}

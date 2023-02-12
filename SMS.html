@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LiTV</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=1280, user-scalable=no"/>
+		<style type="text/css">
+			body{
+				background: #000000;
+				background-image:url("https://webtv.svc.litv.tv/resources/images/litv_main_bg.jpg");
+			}
+			.msg_osd{
+				display: none;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    z-index: 1000;
+			    background-color: rgba(0,0,0,0.7);
+			    -webkit-box-pack: center;
+			    -webkit-justify-content: center;
+			    justify-content: center;
+			    -webkit-box-align: center;
+			    -webkit-align-items: center;
+			    align-items: center;
+			}
+			.msg_osd.show{
+				display: flex;
+				display: -webkit-box;
+				display: -webkit-flex;
+			}
+			.msg_osd > div{
+				color: white;
+			    padding: 18px;
+			    line-height: 150%;
+			    background-color: #24062C;
+			    border: 3px solid #745C90;
+			    border-radius: 15px;
+				width: 757px;
+			}
+			.msg_osd .title{
+				font-size: 32px;
+				line-height: 80px;
+				text-align: center;
+			}
+			.msg_osd .body{
+				margin-bottom: 1.2em;
+			    font-size: 28px;
+			    line-height: 120%;
+			    overflow-wrap: break-word;
+			    white-space: normal;
+			    word-wrap: break-word;
+			    margin-left: 1.6em;
+			    margin-right: 1.6em;
+			    width: 700px;
+			    text-align: justify;
+			}
+			.msg_osd .attach{
+				font-size:0.8em;
+				color:#7A7A7C;
+			}
+			.msg_osd .tool{
+				text-align: center;
+			}
+			.msg_osd .tool > div{
+				text-align: center;
+				display: inline-block;
+			}
+			.msg_osd .btn{
+				font-size: 30px;
+			    line-height: 45px;
+			    width: 292px;
+			    margin: 4px 14px;
+			    padding: 3px;
+			    background-color: #383838;
+			    box-sizing: border-box;
+			    border: 4px #383838 solid;
+			}
+			.msg_osd .btn.active{
+				background-color: #2A8098;
+				border: 4px #A9E2F4 solid;
+				box-shadow: 0px 0px 10px 4px rgba(42, 106, 152, 0.8);
+			}
+			.slider{
+				position: absolute;
+			    width: 100%;
+			    height: 5px;
+			    bottom: 1px;
+			    left: 0px;
+			    overflow: hidden;
+			}
+			.line{
+				position: absolute;
+				background: #4a8df8;
+				width: 100%;
+				height: 100%;
+			}
+			.break{
+				position:absolute;
+				background:#222;
+				width:10px;
+				height:100%;  
+			}
+			.dot1{ 
+				-webkit-animation: loading 2s infinite;
+			}
+			.dot2{ 
+				-webkit-animation: loading 2s 0.5s infinite;
+			}
+			.dot3{ 
+				-webkit-animation: loading 2s 1s infinite;
+			}
+			@-webkit-keyframes loading {
+				from { left: 0; }
+				to { left: 100%; }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="slider">
+			<div class="line"></div>
+			<div class="break dot1"></div>
+			<div class="break dot2"></div>
+			<div class="break dot3"></div>
+		</div>
+		<div class="assets_error_msg msg_osd">
+			<div>
+				<div class="title">應用程式發生錯誤</div>
+				<div class="body">可能是網路或伺服器問題，請確認網路連線再重新嘗試。<br><span class="attach"></span></div>
+				<div class="tool">
+					<div class="btn active">確定</div>
+				</div>
+			</div>
+		</div>
+		<div class="ask_exit msg_osd">
+			<div>
+				<div class="title">是否離開 LiTV 服務？</div>
+				<div class="body"></div>
+				<div class="tool">
+					<div class="btn">取消</div>
+					<div class="btn">確認</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="/js/sms.js" ></script>
+	</body>
+</html>

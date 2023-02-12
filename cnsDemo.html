@@ -1,0 +1,88 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>九宫格布局</title>  
+</head>  
+<body>  
+<html>  
+<head>  
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style type="text/css">  
+/** 重置浏览器默认标签样式 */ 
+
+
+.outer{
+  width:1280px;height: 720px;
+  /*display: inline;*/
+  position: relative;
+  background-image: url("/CNS.jpg");
+  background-size: cover;
+} 
+
+.right_up{
+  	height: 315px;
+    width: 625px;
+    position: absolute;
+    right: 0px;
+    top: 130px; 
+}
+.right_up video{
+    height: 100%;
+    /* width: 100%; */
+}
+
+</style>   
+
+</head> 
+<body>  
+  <div id='info'>helloworld</div>
+  <button id="button">MP4test</button>
+  <button id="clear">clear</button>
+  <button id="play">play</button>
+  <button id="stop">stop</button>
+  <button id="para">para</button>
+  <div class="outer">
+        <div class="right_up" >
+          <video controls id="player">
+            <!-- <source id="source" src="http://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel.ism/.m3u8" type="application/vnd.apple.mpegurl"> -->
+            	<source id="source" src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+          </video>
+        </div>
+  </div>
+</body>  
+<script type="text/javascript">
+document.getElementById("button").addEventListener("click",function(){
+	document.getElementById("source").src = "http://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel.ism/.m3u8"
+	document.getElementById("source").type = "application/vnd.apple.mpegurl";
+	document.getElementById("button").innerText = "M3u8test";
+	document.getElementById("player").load();
+})
+document.getElementById("clear").addEventListener("click",function(){
+	document.getElementById("clear").innerText = "Cleared";
+	document.getElementById("source").src = ""
+	document.getElementById("source").type = "";
+	document.getElementById("player").load();
+})
+document.getElementById("play").addEventListener("click",function(){
+	document.getElementById("player").play();
+})
+document.getElementById("stop").addEventListener("click",function(){
+	document.getElementById("player").pause();
+});
+document.getElementById("source").addEventListener("error",function(e){
+	document.getElementById("stop").innerText = JSON.stringify(e);
+	document.getElementById("para").innerText = JSON.stringify(e.target.parentNode.error);
+	console.log(e);
+});
+document.getElementById("source").addEventListener("canplay",function(e){
+	document.getElementById("stop").innerText = "canplay";
+});
+// document.getElementById("player").addEventListener("error",function(e){
+// 	document.getElementById("para").innerText = JSON.stringify(e.target.parentNode.error);
+// 	console.log("player:",e.target.parentNode.error);
+// });
+
+</script>
+</html>

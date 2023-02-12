@@ -1,0 +1,313 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>九宫格布局</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+</head>  
+<body>  
+<html>  
+<head>  
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">  
+/** 重置浏览器默认标签样式 */ 
+
+
+html, body { width:100%;height: 100%; max-width:100%;display: flex;justify-content: center;} 
+.outer{
+  width:100%;height: 100%;
+  display: inline;
+  position: absolute;
+  z-index: 1;
+} 
+ul,li{margin:0;padding:0;}   
+ 
+.box{width: 200px; height: 230px;position: relative;}   
+  
+/* .box li{float:left;line-height: 30%;width:30%;height: 32.5%;border: solid #555; ; position: relative}    */
+.box img{   
+ float: left;    
+ border: solid #555;
+ width: 100%;   
+ height: 96%;   
+ text-align: center; 
+ position: relative; 
+ transition: all 0.5s ease-in-out;  
+}   
+.right_side{
+  margin-top:10px; 
+  float: right; 
+  width: 100%;    
+}
+.right_up{
+  height: 50%;
+}
+.right_down{
+  padding-top: 100px;
+  width: 90%;
+  height: 33%;
+}
+video,img{
+  height: 75%;
+  width: 95%;
+}
+.focus {
+    background-color:#BC8F8F;
+    z-index: 5;
+    display:block; 
+    text-align: center;  
+    position: relative; 
+    width: 105%;
+    height: 102%;
+    transform:scale(1.2,1.05) /* width,height */
+}
+.focusBanner {
+    background-color:#BC8F8F;
+    z-index: 3;
+    display:block; 
+    text-align: center;  
+    position: relative; 
+    top: 5px;
+    right: 5px;
+}
+.game-board{
+      display: grid;
+      width: 100%;
+      height: 700px;
+      grid-template-columns: 1fr 1fr 1fr ;
+      grid-row-gap: 10px;
+      overflow: hidden;
+      padding: 20px;
+      padding-top: 30px;
+      z-index: 1;
+}
+.outer {
+  display: grid;
+  grid-template-columns: 1.2fr 30px 0.8fr ;
+  grid-gap: 5px;
+}
+</style>   
+<!--<script src="js/movement.js" type="text/javascript" charset="utf-8" ></script>
+-->
+<script type="text/javascript">
+
+class DivBlock{
+	windowScroll(blockId,scrollPosition){
+		blockId.stop().animate({scrollTop:scrollPosition}, 300, 'swing')
+	}
+	boxMoveLeft(){
+		lastIndex = tabIndex;
+		if((tabIndex) === 1+(scrollPosition / MOVE_RANGE)*3){
+			if ((tabIndex-1) <= 0) {
+				tabIndex = lastLiIndex;
+				scrollPosition = Math.ceil((lastLiIndex - 9)/3)*MOVE_RANGE;
+				mainBlock.windowScroll(boxList[boxList.length-1],scrollPosition);//downToBottom
+				box.onFocus(boxList[lastLiIndex]);
+				box.offFocus(boxList[lastIndex]);
+			}
+			else {
+				tabIndex = tabIndex - 1;
+				scrollPosition -= MOVE_RANGE;
+				mainBlock.windowScroll(boxList[boxList.length-1],scrollPosition);//up
+			}
+		}
+		else{
+			tabIndex--;
+			box.onFocus(boxList[tabIndex]);
+			box.offFocus(boxList[lastIndex]);
+		}
+	}
+	boxMoveRight(){
+		lastIndex = tabIndex;
+	  	if(tabIndex === 9+(scrollPosition/MOVE_RANGE)*3 || tabIndex === lastLiIndex){ //moveToBanner
+			banner.onFocus(RemainObj[2]);
+			banner.status = true;
+			box.offFocus(boxList[tabIndex]);
+		}
+		else{
+			tabIndex++;
+			box.onFocus(boxList[tabIndex]);
+			box.offFocus(boxList[lastIndex]);
+		}
+	}
+	boxMoveUp(){
+		lastIndex = tabIndex; 
+		if (tabIndex > 0){
+			if(tabIndex === 3+(scrollPosition/MOVE_RANGE)*3 || tabIndex === 2+(scrollPosition/MOVE_RANGE)*3 || tabIndex === 1+(scrollPosition/MOVE_RANGE)*3){
+				tabIndex = tabIndex - 3;
+				scrollPosition -= MOVE_RANGE;
+				mainBlock.windowScroll(boxList[boxList.length-1],scrollPosition); //up
+			}
+			else tabIndex = tabIndex - 3; 
+		}
+	    if (null == boxList[tabIndex]) {
+	        scrollPosition = Math.ceil((lastLiIndex - 9)/3)*MOVE_RANGE;
+	        mainBlock.windowScroll(boxList[boxList.length-1],scrollPosition);//downToBottom
+	        tabIndex =  Math.floor(lastLiIndex/3.1) * 3 + lastIndex;
+	        if(tabIndex > lastLiIndex) tabIndex = lastLiIndex;
+	    }
+		box.onFocus(boxList[tabIndex]);
+		box.offFocus(boxList[lastIndex]);
+	}
+	boxMoveDown(){
+		lastIndex = tabIndex;
+		if (tabIndex <= lastLiIndex) {
+			if (tabIndex === 9+(scrollPosition/MOVE_RANGE)*3 || tabIndex === 8+(scrollPosition/MOVE_RANGE)*3 || tabIndex === 7+(scrollPosition/MOVE_RANGE)*3) {
+				tabIndex = tabIndex + 3;
+	            scrollPosition += MOVE_RANGE;
+	            mainBlock.windowScroll(boxList[boxList.length-1],scrollPosition);//down
+	        }
+	        else tabIndex = tabIndex + 3;
+		}
+		if (null == boxList[tabIndex] || tabIndex > lastLiIndex){ 
+			tabIndex = tabIndex - 3;
+			if(lastLiIndex % 3 === 1){
+				if(tabIndex % 3 !== 1)	{
+					tabIndex = lastLiIndex;
+				}
+			    else {
+					tabIndex = tabIndex % 3;
+			    	scrollPosition = 0;	
+			    }
+			}
+			else if(lastLiIndex % 3 === 2){
+				if(tabIndex % 3 !== 0){
+					tabIndex = tabIndex % 3;
+			    	scrollPosition = 0;
+				} 
+			    else tabIndex = lastLiIndex;
+			}
+			else{
+				tabIndex = tabIndex % 3;
+				if(tabIndex === 0) tabIndex = 3;
+			    scrollPosition = 0;
+			}
+	    }
+		box.onFocus(boxList[tabIndex]);
+		box.offFocus(boxList[lastIndex]);
+		mainBlock.windowScroll(boxList[boxList.length-1],scrollPosition);
+	}
+
+}
+class Box{
+	onFocus(newid){
+		newid.classList.add('focus');
+	}
+	offFocus(oldid){
+		oldid.classList.remove('focus');
+	}
+}
+class Banner extends Box{
+	constructor(){
+		super();
+	}
+	onFocus (newid){
+		newid.parentElement.classList.add('focusBanner');
+	}
+	offFocus (oldid){
+		oldid.parentElement.classList.remove('focusBanner');
+	}
+}
+
+
+// 鍵盤事件
+document.onkeydown = function(event){
+// 相容 Mozilla Firefox
+  if (event.keyCode <= 40 && event.keyCode >= 37) {
+    event.preventDefault();
+    keytd(event.keyCode);
+  }
+}
+// 實現切換功能主要程式碼
+function keytd(key){
+// 左
+  if (key == 37) {
+	if(banner.status){ //backToBox
+		banner.offFocus(RemainObj[2]);
+		box.onFocus(boxList[tabIndex]);
+		banner.status = false;
+	}
+	else{
+		mainBlock.boxMoveLeft();
+	}
+  }
+  // 右
+  else if (key == 39) {
+	mainBlock.boxMoveRight();	
+  }
+  // 上
+  else if (key == 38) { 
+	mainBlock.boxMoveUp();
+  }
+  // 下
+  else if (key == 40) {
+   	mainBlock.boxMoveDown();
+  }
+}
+  
+</script>
+<script type="text/javascript">
+	var lastLiIndex = 0;
+	var boxList= [];
+	var RemainObj = [];
+	var banner = new Banner();  
+	var tabIndex = 1;
+	var lastIndex = 0; //上一個index
+	var scrollPosition = 0;
+	var box = new Box();
+	var mainBlock = new DivBlock();
+	const MOVE_RANGE = 240;
+
+function start(){
+    $.ajax({
+      type:'POST',
+      dataType: "json",
+      url: "/postJSON",
+      data: {},
+      success: jsonResp
+    });
+}
+function jsonResp(data) {
+    console.log("start");
+    var js = JSON.stringify(data);
+    lastLiIndex = data.length;
+    if (js.length>0){
+      $.each(data, function( i, val ) {
+        console.log(i+1,val);
+        $("#mainBlock").append("<div class=box data-index="+(i+1)+"> <img  id=ele_"+(i+1)+" src='./" + val + "'>  </div>");
+      });  
+
+      for(var i = 1; i < lastLiIndex + 1; i++){
+      	boxList[i] = document.getElementById("ele_"+i);
+      }
+      RemainObj[1] = document.getElementById("player");
+      RemainObj[2] = document.getElementById("banner"); 
+      boxList[boxList.length] = $("#mainBlock");
+      box.onFocus(boxList[1]);
+    }    
+}
+
+
+$(document).ready(start);  
+
+</script>
+
+</head> 
+<body>  
+  <div class="outer">
+    <div class="game-board" id="mainBlock"></div>
+    <div></div>
+    <div class="inline right_side" >
+        <div class="right_up" >
+          <video controls id="player">
+            <source src="./mov_bbb.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="right_down" >
+          <img src="./banner.png" class="img" id="banner">
+        </div>
+    </div> 
+  </div>
+</body>  
+</html>

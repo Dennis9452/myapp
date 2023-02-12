@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+        .qrcode{
+            /* height: 300px;
+            width: 300px; */
+            border-radius: 50%;
+            animation: imageRotation 2s;
+            position: relative;
+        }
+
+        .container {
+            /*centers in the container*/
+            text-align: center;
+        }
+
+        @keyframes imageRotation {
+            from{
+                opacity: 0; 
+                transform: rotateY(180deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+        }
+
+        .circularTextContainer{
+            position: absolute;
+            left: 50%;
+            top: 2%;
+        }
+
+        div.circularText {
+            /*allows for centering*/
+            display: inline-block;
+            /*adjust as needed*/
+            /* margin-bottom: 128px; */
+            color: chartreuse;
+            position: relative;
+            height: 160px;
+            transform-origin: left bottom;
+            opacity: 0;
+        }
+
+        div.circularText.active {
+            animation: textRotation 25s;
+            animation-iteration-count: infinite;
+            opacity: 1;
+            /* transform: rotate3d(0, 0, 1, 180deg); */
+        }
+
+        @keyframes textRotation {
+            0%{
+                opacity: 0; transform: rotate3d(0, 0, 1, 0deg);
+            }
+            20%{
+                opacity: 1; transform: rotate3d(0, 0, 1, 200deg);
+            }
+            60% {
+                opacity: 1; transform: rotate3d(0, 0, 1, 200deg);
+            }
+            80% {
+                opacity: 0; transform: rotate3d(0, 0, 1, 300deg);
+            }
+            100% {
+                opacity: 0; transform: rotate3d(0, 0, 1, 360deg);
+            }
+        }
+
+        .circularText p{
+            margin: 0;
+        }
+
+        .qrcode canvas {
+            border-radius: 150px;
+            margin: 2% 0;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="qrcode" id="qrcode">
+                <div class="circularTextContainer">
+                    <div id="circularText" class="circularText"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        circularText(" text on a curve          ", 160, 0);
+
+        const qrCode = new QRCodeStyling({
+            width: 300,
+            height: 300,
+            type: "canvas",
+            data: "https://www.facebook.com/",
+            image: "./materials/testing/icon2.png",
+            margin: 40,
+            dotsOptions: {
+                color: "#9a17c3",
+                type: "classy"
+            },
+            backgroundOptions: {
+                // color: "#e9e9e9",
+                color:"#101010",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 10
+            },
+            cornersSquareOptions: {
+                type: 'rounded'
+            },
+            cornersDotOptions: {
+                color: "#9a17c3"
+            }
+        });
+
+        qrCode.append(document.getElementById("qrcode"));
+        function circularText(txt, radius, classIndex) {
+            txt = txt.split(""),
+            classIndex = document.getElementsByClassName("circularText")[classIndex];
+
+            var deg = 360 / txt.length,
+            origin = 0;
+
+            txt.forEach((ea) => {
+                ea = "<p style='height:"+radius+"px;position:absolute;transform:rotate("+origin+"deg);transform-origin:0 100%'>"+ea+"</p>";
+                classIndex.innerHTML += ea;
+                origin += deg;
+            });
+        }
+
+        var inteval = setTimeout(function(){
+            document.getElementById("circularText").classList.add("active");
+        },2000);
+
+        
+    </script>
+</html>

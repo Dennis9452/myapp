@@ -1,0 +1,182 @@
+[
+    {
+      "event_code": "promo_channel_01",
+      "event_name": "ChannelTrial_30days",
+      "display_interval_hour": 20,
+      "entry": ["start_page"],
+      "state": {
+        "start_page": {
+          "background": "http://static.svc.litv.tv/tv/mkt/modals/channel_1280.jpg",
+          "left_btn_txt": "下次再說",
+          "right_btn_txt": "立即領取",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:next_step",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "init",
+          "title": "",
+          "msg": ""
+        },
+        "BSM-00000": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_success_1920.jpg",
+          "left_btn_txt": "返回",
+          "right_btn_txt": "開始觀賞",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:done",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "success",
+          "title": "恭喜您領取成功",
+          "msg": "※可使用服務天數可至《購買專區-可使用服務》查詢。"
+        },
+        "BSM-00802": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_fail_1920.jpg",
+          "left_btn_txt": "返回",
+          "right_btn_txt": "",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "direct:litv://litv.tv/app/tv?view=purchase",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "您已領取過免費體驗",
+          "msg": "若您喜歡LiTV的優質影音服務，您可點擊主選單內的《購買專區》，挑選適合的方案購買。即可繼續觀賞豐富精彩的影音內容。"
+        },
+        "BSM-00804": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_fail_1920.jpg",
+          "left_btn_txt": "返回",
+          "right_btn_txt": "",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "direct:litv://litv.tv/app/tv?view=purchase",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "免費體驗僅限新註冊會員領取",
+          "msg": "若您喜歡LiTV的優質影音服務，您可點擊主選單內的《購買專區》，挑選適合的方案購買。即可繼續觀賞豐富精彩的影音內容。"
+        },
+        "unknow_error": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_fail_1920.jpg",
+          "left_btn_txt": "返回",
+          "right_btn_txt": "重新領取",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:again",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "兌換體驗失敗",
+          "msg": "因網路問題兌換體驗失敗，請稍後再試。若此問題持續發生，請洽客服專線：02-7707-0708。"
+        }
+      }
+    },
+    {
+      "event_code": "promo_1111",
+      "event_name": "ChannelTrial_30days",
+      "display_interval_hour": 2,
+      "entry": ["start_page"],
+      "state": {
+        "start_page": {
+          "background": "http://static.svc.litv.tv/tv/mkt/modals/channel_1280.jpg",
+          "left_btn_txt": "下次再說",
+          "right_btn_txt": "立即領取",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:next_step",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "init",
+          "title": "",
+          "msg": ""
+        },
+        "BSM-00000": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_success_1920.jpg",
+          "left_btn_txt": "返回",
+          "right_btn_txt": "開始觀賞",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:done",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "success",
+          "title": "恭喜您領取成功",
+          "msg": "※可使用服務天數可至《購買專區-可使用服務》查詢。"
+        },
+        "BSM-00802": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_fail_1920.jpg",
+          "left_btn_txt": "返回頁首",
+          "right_btn_txt": "",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "direct:litv://litv.tv/app/tv?view=purchase",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "您已領取過免費體驗",
+          "msg": "若您喜歡LiTV的優質影音服務，您可點擊主選單內的《購買專區》，挑選適合的方案購買。即可繼續觀賞豐富精彩的影音內容。"
+        },
+        "BSM-00804": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_fail_1920.jpg",
+          "left_btn_txt": "返回頁首",
+          "right_btn_txt": "",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "direct:litv://litv.tv/app/tv?view=purchase",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "免費體驗僅限新註冊會員領取",
+          "msg": "若您喜歡LiTV的優質影音服務，您可點擊主選單內的《購買專區》，挑選適合的方案購買。即可繼續觀賞豐富精彩的影音內容。"
+        },
+        "unknow_error": {
+          "background": "https://static.svc.litv.tv/tv/mkt/modals/free_fail_1920.jpg",
+          "left_btn_txt": "返回頁首",
+          "right_btn_txt": "重新領取",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:again",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "兌換體驗失敗",
+          "msg": "因網路問題兌換體驗失敗，請稍後再試。若此問題持續發生，請洽客服專線：02-7707-0708。"
+        }
+      }
+    },
+    {
+      "event_code": "",
+      "event_name": "loop_imag",
+      "display_interval_hour": 0,
+      "entry": ["pic1","pic2","pic3"],
+      "state": {
+        "pic1": {
+          "background": "http://static.svc.litv.tv/tv/mkt/modals/channel_1280.jpg",
+          "left_btn_txt": "ok，好！",
+          "right_btn_txt": null,
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": null,
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "init",
+          "title": "",
+          "msg": ""
+        },
+        "pic2": {
+          "background": "http://static.svc.litv.tv/tv/mkt/modals/channel_1280.jpg",
+          "left_btn_txt": "不要再顯示",
+          "right_btn_txt": "立即領取",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:next_step",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "init",
+          "title": "",
+          "msg": ""
+        },
+        "pic3": {
+          "background": "http://static.svc.litv.tv/tv/mkt/modals/channel_1280.jpg",
+          "left_btn_txt": "吵爽沒",
+          "right_btn_txt": "立即領取",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "direct:litv://litv.tv/app/tv?view=purchase",
+          "cancel_intent": "execute:back",
+          "countdown_sec": -1,
+          "layout_type": "init",
+          "title": "",
+          "msg": ""
+        }
+      }
+    }
+  ]

@@ -1,0 +1,81 @@
+{
+  "event_interval_minute": 0,
+  "events": [
+    {
+      "event_code": "promo_channel_01",
+      "event_name": "ChannelTrial_30days",
+      "state_interval_minute": 1200,
+      "must_login": false,
+      "entry": [
+        "start_page"
+      ],
+      "state": {
+        "start_page": {
+          "background": "http:\/\/static.svc.litv.tv\/tv\/mkt\/modals\/32175ec1297f8033d9fe1b6196088510.jpg",
+          "countdown_sec": 15,
+          "layout_type": "init",
+          "title": "",
+          "msg": "",
+          "left_btn_txt": "\u4e0b\u6b21\u518d\u8aaa",
+          "right_btn_txt": "\u7acb\u5373\u9818\u53d6",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:next_step",
+          "cancel_intent": "execute:done",
+          "default_focus": "right"
+        },
+        "BSM-00000": {
+          "background": "http:\/\/static.svc.litv.tv\/tv\/mkt\/modals\/d1aa1f14bb6ab3629bc9e1075c333672.jpg",
+          "countdown_sec": -1,
+          "layout_type": "success",
+          "title": "\u606d\u559c\u60a8\u9818\u53d6\u6210\u529f",
+          "msg": "\u203b\u53ef\u4f7f\u7528\u670d\u52d9\u5929\u6578\u53ef\u81f3\u300a\u8cfc\u8cb7\u5c08\u5340-\u53ef\u4f7f\u7528\u670d\u52d9\u300b\u67e5\u8a62\u3002",
+          "left_btn_txt": "\u958b\u59cb\u89c0\u8cde",
+          "right_btn_txt": "",
+          "left_btn_intent": "direct:\/channel?headend_id=TW00100&no=51",
+          "right_btn_intent": "",
+          "cancel_intent": "execute:done",
+          "default_focus": "left"
+        },
+        "BSM-00802": {
+          "background": "http:\/\/static.svc.litv.tv\/tv\/mkt\/modals\/5518b27e3c59f15cf2066bf0f2ce7e8c.jpg",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "\u60a8\u5df2\u9818\u53d6\u904e\u514d\u8cbb\u9ad4\u9a57",
+          "msg": "\u82e5\u60a8\u559c\u6b61LiTV\u7684\u512a\u8cea\u5f71\u97f3\u670d\u52d9\uff0c\u60a8\u53ef\u9ede\u64ca\u4e3b\u9078\u55ae\u5167\u7684\u300a\u8cfc\u8cb7\u5c08\u5340\u300b\uff0c\u6311\u9078\u9069\u5408\u7684\u65b9\u6848\u8cfc\u8cb7\u3002\u5373\u53ef\u7e7c\u7e8c\u89c0\u8cde\u8c50\u5bcc\u7cbe\u5f69\u7684\u5f71\u97f3\u5167\u5bb9\u3002",
+          "left_btn_txt": "\u8fd4\u56de\u9996\u9801",
+          "right_btn_txt": "",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "",
+          "cancel_intent": "execute:done",
+          "default_focus": "left"
+        },
+        "BSM-00804": {
+          "background": "http:\/\/static.svc.litv.tv\/tv\/mkt\/modals\/5518b27e3c59f15cf2066bf0f2ce7e8c.jpg",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "\u514d\u8cbb\u9ad4\u9a57\u50c5\u9650\u65b0\u8a3b\u518a\u6703\u54e1\u9818\u53d6",
+          "msg": "\u82e5\u60a8\u559c\u6b61LiTV\u7684\u512a\u8cea\u5f71\u97f3\u670d\u52d9\uff0c\u60a8\u53ef\u9ede\u64ca\u4e3b\u9078\u55ae\u5167\u7684\u300a\u8cfc\u8cb7\u5c08\u5340\u300b\uff0c\u6311\u9078\u9069\u5408\u7684\u65b9\u6848\u8cfc\u8cb7\u3002\u5373\u53ef\u7e7c\u7e8c\u89c0\u8cde\u8c50\u5bcc\u7cbe\u5f69\u7684\u5f71\u97f3\u5167\u5bb9\u3002",
+          "left_btn_txt": "\u8fd4\u56de\u9996\u9801",
+          "right_btn_txt": "",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "",
+          "cancel_intent": "execute:done",
+          "default_focus": "left"
+        },
+        "unknow_error": {
+          "background": "http:\/\/static.svc.litv.tv\/tv\/mkt\/modals\/5518b27e3c59f15cf2066bf0f2ce7e8c.jpg",
+          "countdown_sec": -1,
+          "layout_type": "fail",
+          "title": "\u514c\u63db\u9ad4\u9a57\u5931\u6557",
+          "msg": "\u56e0\u7db2\u8def\u554f\u984c\u514c\u63db\u9ad4\u9a57\u5931\u6557\uff0c\u8acb\u7a0d\u5f8c\u518d\u8a66\u3002\u82e5\u6b64\u554f\u984c\u6301\u7e8c\u767c\u751f\uff0c\u8acb\u6d3d\u5ba2\u670d\u5c08\u7dda\uff1a02-7707-0708\u3002",
+          "left_btn_txt": "\u8fd4\u56de\u9996\u9801",
+          "right_btn_txt": "\u91cd\u65b0\u9818\u53d6",
+          "left_btn_intent": "execute:done",
+          "right_btn_intent": "execute:again",
+          "cancel_intent": "execute:done",
+          "default_focus": "right"
+        }
+      }
+    }
+  ]
+}

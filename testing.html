@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/js/jquery.preload.js"></script>
+<style type="text/css" >
+	/* <div id="dateExpired" class="expiredDate rightCol" data-content="[頻道全餐] 於7天後到期"></div> */
+/* channel */
+.infoBox::before{
+    background: orange;
+    content: attr(data-content);
+    font-size: 21px;
+    /* line-height: 26px; */
+    position: absolute;
+    top: -50px;
+    text-align: center;
+    padding: 10px 11px;
+}
+/* channel dialog */
+.dialog_body::before {
+    background: orange;
+    content: attr(data-content);
+    color: black;
+    line-height: 16px;
+    padding: 10px 11px;
+    margin: 60px;
+}
+.dialog_body {
+	/*add on */
+margin-bottom: 15px;
+}
+/* menu */
+.timeInfo::before{
+    background: orange;
+    content: attr(data-content);
+    color: black;
+    line-height: 76px;
+    padding: 10px 11px;
+    margin-right: 60px;
+}
+
+/* purchase */
+.timeInfoAbs::before{
+    background: orange;
+    content: attr(data-content);
+    color: black;
+    line-height: 76px;
+    padding: 10px 11px;
+    margin-right: 60px;
+}
+/* player */
+.controlsBox::before {
+    background: orange;
+    content: attr(data-content);
+    color: black;
+    line-height: 46px;
+    padding: 10px 11px;
+    margin-right: 60px;
+    font-size: larger;
+}
+</style>
+<body>
+
+<p>Click the button to create a SCRIPT element that alerts "Hello World!".</p>
+
+<button id="menuContent">menuContent</button>
+<button id="previewContent">previewContent</button>
+<button id="p">3</button>
+<div class="w3-content w3-section mySlides" id="mySlides" style="width:921px;height:532px;">
+  <!-- <img class="mySlides" src="https://shop.r10s.jp/wss-r/cabinet/nba3/b0489.jpg" style="width:100%">
+  <img class="mySlides" src="https://shop.r10s.jp/wss-r/cabinet/nba3/b0589.jpg" style="width:100%">
+  <img class="mySlides" src="https://shop.r10s.jp/wss-r/cabinet/nba3/b0289.jpg" style="width:100%">-->
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+document.getElementById("menuContent").addEventListener("click",function(){
+	// console.log(this.innerHTML)
+	toLogServer(this.innerHTML);
+})
+document.getElementById("previewContent").addEventListener("click",function(){
+	// console.log(this.innerHTML)
+	toLogServer(this.innerHTML);
+	
+})
+document.getElementById("p").addEventListener("click",function(){
+	// console.log(this.innerHTML)
+	toLogServer(this.innerHTML);
+})
+
+function toLogServer(type){
+	server = "https://dev-acs.svc.litv.tv/hsi/v1";
+	var content;
+	switch(type){
+		case "menuContent" :
+			content = menuContent;
+			break;
+		case "previewContent":
+			content = previewContent;
+			break;
+	}
+
+	var xhr = new XMLHttpRequest();
+		xhr.open('POST', server, true);
+		xhr.setRequestHeader("Content-type", "application/json");
+
+	xhr.onload = function () { 
+	    console.log(JSON.parse(xhr.responseText))
+	    var response = JSON.parse(xhr.responseText);
+
+	   	if(content == "menuContent"){
+	   		getMenu(response);
+	   	}else{
+	   		getPreview(response)
+	   	}
+	    
+	    // carousel()
+	};
+	var menuContent = {
+		"jsonrpc": "2.0",
+		"id": 3,
+		"method": "getMainMenu",
+		"params": {
+		"deviceId": "LTINF003000020150429134000",
+		"projectNum": "LTINF00"
+		}
+	}
+	var previewContent ={
+	    "jsonrpc": "2.0",
+	    "id": 3,
+	    "method": "getLauncherRecommend",
+	    "params": {
+	        "deviceId": "",
+	        "projectNum": "LTSMS04"
+	    }
+	}
+	
+	xhr.send(JSON.stringify(content));
+}
+
+function getMenu(response){
+	console.log(response)
+	var menuList = [],bannerList = [];
+	menuJson = {};
+	pageTitleMap = {};
+	menuItem = response.result.items
+
+	var bannerJson = {};
+	
+	for (var [key, value] of Object.entries(response.result.items)) {
+		menuList.push(value)
+	}
+	$.map(menuList, function(item) {
+		bannerJson[item.appKey] = item.content.adList
+		pageTitleMap[item.appKey] = item.title
+	});
+	console.log("bannerJson",bannerJson)
+	console.log("pageTitleMap",pageTitleMap)
+	document.getElementById("mySlides").style.backgroundImage = "url(" + bannerJson["movie"][0].data + ")";
+
+	$.map(Object.keys(bannerJson), function(value, index) {
+		$.map(bannerJson[value], function(value, index){
+			bannerList.push(value.data);
+			$.preload("bannerList",value.data)
+		})
+	});	
+}
+// function getPreview(response){
+// 	console.log(response)
+// 	var menuList = [],bannerList = [];
+// 	menuJson = {};
+// 	pageTitleMap = {};
+// 	menuItem = response.result.items
+
+// 	var bannerJson = {};
+	
+// 	for (var [key, value] of Object.entries(response.result.items)) {
+// 		menuList.push(value)
+// 	}
+// 	$.map(menuList, function(item) {
+// 		bannerJson[item.appKey] = item.content.adList
+// 		pageTitleMap[item.appKey] = item.title
+// 	});
+// 	console.log("bannerJson",bannerJson)
+// 	console.log("pageTitleMap",pageTitleMap)
+// 	document.getElementById("mySlides").style.backgroundImage = "url(" + bannerJson["movie"][0].data + ")";
+
+// 	$.map(Object.keys(bannerJson), function(value, index) {
+// 		$.map(bannerJson[value], function(value, index){
+// 			bannerList.push(value.data);
+// 			$.preload("bannerList",value.data)
+// 		})
+// 	});	
+// }
+
+
+var index = 1;
+function carousel() {
+    var i;
+    var mySlides = document.getElementById("mySlides");
+    var detail = menuJson["movie"];
+
+   	index++;
+    if (index >= detail.length) {index = 0}  
+    mySlides.style.backgroundImage = "url(" + menuJson["movie"][index].data + ")";  
+    
+
+    setTimeout(carousel, detail[index].duration*1000); // Change image every 2 seconds
+    console.log(detail[index].duration)
+}
+
+
+
+
+</script>
